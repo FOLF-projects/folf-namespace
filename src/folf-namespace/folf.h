@@ -7,6 +7,9 @@
 
 // includes precompiled headers
 #include "pch.h"
+// tells the compile to only compile this file again if the content changes
+#pragma once
+
 // includes various functions for benchmarking and common tasks
 namespace folf
 {
