@@ -26,12 +26,14 @@ bool folf::prime::testPrime(unsigned long long num)
 {
     // taking the squareroot to speed up the loop
     // placing the result into another variable to save more time (seems like c++ calculates the sqrt on every loop if its inside the case)
-    int root = sqrt(num);
-    for (int j = 3; j <= root; j += 2) {
-      if (num % j == 0) { // result of 0 means its not a prime = it can be devised through anouther number except 0 and himself
-         return false;
-      }
-   }
+    int root = sqrt(*num);
+    for (int j = 3; j <= root; j += 2) 
+    {
+        if (*num % j == 0) // result of 0 means its not a prime = it can be devised through anouther number except 0 and himself
+        {
+            return false;
+        }
+    }
    return true;
 }
 unsigned long long folf::prime::getSum()
