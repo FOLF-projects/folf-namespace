@@ -1,6 +1,13 @@
 // folf namespace - by a fox and a wolf :D
 // contains all funktions used inside the repositories programms
-#include "pch.h" // includes precompiled headers
+// and some benchmarking functions
+// licenced under MIT on GitHub
+// https://github.com/MCWertGaming/folf-namespace
+// by Damon Leven and Admiral Emser
+
+// includes precompiled headers
+#include "pch.h"
+// includes various functions for benchmarking and common tasks
 namespace folf
 {
     class prime
