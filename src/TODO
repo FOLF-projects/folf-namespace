@@ -1,3 +1,4 @@
 implement a method to gather the PCs cores to set multithreading
 add a memory benchmark
 add a allocation benchmark
+add a time benchmaek exporter for json
