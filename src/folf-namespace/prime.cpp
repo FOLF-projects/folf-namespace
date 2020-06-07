@@ -10,7 +10,7 @@ folf::prime::~prime()
 void folf::prime::genPrime(unsigned long long* maxNumber)
 {
     // OpenMP implementation for multithreading the for loop, completly optional
-    omp_set_num_threads( 999 );                               // this defines the number of maximal threads, 999 should work fine (threads can be more than actual CPU cores, because most loops are empty)
+    omp_set_num_threads( 9 );                               // this defines the number of maximal threads, 999 should work fine (threads can be more than actual CPU cores, because most loops are empty)
     #pragma omp parallel for reduction( + : primeSum )        // if it fails to compile, make sure to set -fopenmp and use a modern compiler shiped with OpenMP
 
     for (unsigned long long i = 1; i < *maxNumber; i += 2)
