@@ -24,7 +24,7 @@ int main() {
 
     bench.printTimeMicroseconds();
     bench.printTimeMilliseconds();
-    std::cout << bench.getSeconds() << std::endl;
+    bench.printTimeSeconds();
 
     std::cout << "Calculation finished!" << std::endl;
     std::cout << "sum is: " << prime.getSum() << std::endl;
