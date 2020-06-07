@@ -1,8 +1,8 @@
-
+# vscode config files
 .vscode/
-
+# linux cmake files and cache
 build/
-
+# vsc config files
 .vs/
-
+# windows cmake files and cache
 out/
