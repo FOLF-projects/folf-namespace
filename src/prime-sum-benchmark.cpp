@@ -18,7 +18,7 @@ int main() {
 
     bench.setStartTime();
 
-    prime.genPrime(maxNumber);
+    prime.genPrime(&maxNumber);
 
     bench.setStopTime();
 

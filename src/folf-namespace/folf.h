@@ -16,12 +16,12 @@ namespace folf
         // stores the sum of all generated primes
         unsigned long long primeSum;
         // tests a given number if its a prime
-        bool testPrime(unsigned long long);
+        bool testPrime(unsigned long long*);
     public:
         prime();
         ~prime();
         // generates all primes from 1 to a given number
-        void genPrime(unsigned long long);
+        void genPrime(unsigned long long*);
         // returns the sum of all generated prime numbers
         unsigned long long getSum();
     };
