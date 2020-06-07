@@ -1,0 +1,3 @@
+move the functions into a class
+create more classes of most tasks
+implement a method to gather the PCs cores to set multithreading
