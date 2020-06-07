@@ -16,9 +16,7 @@ void folf::benchmarking::setStopTime()
 }
 unsigned long long folf::benchmarking::getMicroseconds()
 {
-    auto start = std::chrono::time_point_cast<std::chrono::microseconds>(startTime).time_since_epoch().count();
-    auto stop = std::chrono::time_point_cast<std::chrono::microseconds>(stopTime).time_since_epoch().count();
-    return stop - start;
+    return std::chrono::time_point_cast<std::chrono::microseconds>(stopTime).time_since_epoch().count() - std::chrono::time_point_cast<std::chrono::microseconds>(startTime).time_since_epoch().count();
 }
 unsigned long long folf::benchmarking::getMilliseconds()
 {
