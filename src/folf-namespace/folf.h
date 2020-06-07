@@ -13,19 +13,25 @@ namespace folf
     public:
         prime();
         ~prime();
+        // generates all primes from 1 to a given number
         void genPrime(unsigned long long);
+        // returns the sum of all generated prime numbers
         unsigned long long getSum();
     };
 
     class benchmarking
     {
     private:
+        // stores the timestamps
         std::chrono::_V2::system_clock::time_point startTime, stopTime;
     public:
         benchmarking();
         ~benchmarking();
+        // set start time
         void setStartTime();
+        // set stoptime
         void setStopTime();
+        // returns taken time
         double getTime();
     };
 }

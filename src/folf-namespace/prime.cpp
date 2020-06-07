@@ -2,7 +2,7 @@
 
 folf::prime::prime()
 {
-    primeSum = 2;
+    primeSum = 2; // sets the prime sum to 2, because every second number gets skipped
 }
 folf::prime::~prime()
 {
@@ -15,6 +15,7 @@ void folf::prime::genPrime(unsigned long long maxNumber)
 
     for (unsigned long long i = 1; i < maxNumber; i += 2)
     {
+        // testPrime returns true, if the given number is a Prime
         if (testPrime(i) == true)
         {
             primeSum = primeSum + i;
