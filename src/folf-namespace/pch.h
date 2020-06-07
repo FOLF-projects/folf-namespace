@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <chrono>
+#include "omp.h"
 #if defined(__linux__)
-    #include "omp.h"
     #include <math.h>
 #endif
