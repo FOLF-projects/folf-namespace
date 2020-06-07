@@ -31,10 +31,13 @@ namespace folf
         void setStartTime();
         // set stoptime
         void setStopTime();
+        // calculate taken time
         unsigned long long getMicroseconds();
-        long double getMilliseconds();
+        unsigned long long getMilliseconds();
+        long double getSeconds();
         // returns taken time
         void printTimeMicroseconds();
         void printTimeMilliseconds();
+        void printTimeSeconds();
     };
 }

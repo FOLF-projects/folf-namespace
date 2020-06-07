@@ -20,16 +20,24 @@ unsigned long long folf::benchmarking::getMicroseconds()
     auto stop = std::chrono::time_point_cast<std::chrono::microseconds>(stopTime).time_since_epoch().count();
     return stop - start;
 }
-long double folf::benchmarking::getMilliseconds()
+unsigned long long folf::benchmarking::getMilliseconds()
 {
-    return getMicroseconds() * 0.001;
+    return getMicroseconds() / 1000;
+}
+long double folf::benchmarking::getSeconds()
+{
+    return getMicroseconds() / 1000000;
 }
 
 void folf::benchmarking::printTimeMicroseconds()
 {
-    std::cout << "Time: " << getMicroseconds() << " microsends" << std::endl;
+    std::cout << "Time: " << getMicroseconds() << " microseconds" << std::endl;
 }
 void folf::benchmarking::printTimeMilliseconds()
 {
     std::cout << "Time: " << getMilliseconds() << " milliseconds" << std::endl;
+}
+void folf::benchmarking::printTimeSeconds()
+{
+    std::cout << "Time: " << getSeconds() << " seconds" << std::endl;
 }
