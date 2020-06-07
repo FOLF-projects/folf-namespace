@@ -23,7 +23,7 @@ namespace folf
     {
     private:
         // stores the timestamps
-        std::chrono::_V2::system_clock::time_point startTime, stopTime;
+        std::chrono::time_point<std::chrono::high_resolution_clock> startTime, stopTime;
     public:
         benchmarking();
         ~benchmarking();
@@ -31,7 +31,10 @@ namespace folf
         void setStartTime();
         // set stoptime
         void setStopTime();
+        unsigned long long getMicroseconds();
+        long double getMilliseconds();
         // returns taken time
-        double getTime();
+        void printTimeMicroseconds();
+        void printTimeMilliseconds();
     };
 }
