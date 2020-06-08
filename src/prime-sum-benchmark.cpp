@@ -6,10 +6,10 @@
 // #include "pch.h" // includes precompiled header with 
 #include "folf-namespace/folf.h"
 
-int main() {
-
-    unsigned long long maxNumber = 29999999;
-    std::cout << "primenumber calculator" << std::endl;
+int main() 
+{
+    unsigned long long maxNumber = 10000000;
+    std::cout << "prime number calculator" << std::endl;
     std::cout << "calculates every prime number up to " << maxNumber << std::endl;
     std::cout << "starting to calculate..." << std::endl;
 
