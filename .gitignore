@@ -6,3 +6,4 @@ build/
 .vs/
 # windows cmake files and cache
 out/
+imgui.ini
