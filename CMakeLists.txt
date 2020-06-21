@@ -22,7 +22,3 @@ endif()
 # prime-sum-benchmark
 add_executable(prime-sum-benchmark src/prime-sum-benchmark.cpp)
 target_precompile_headers(prime-sum-benchmark PRIVATE src/folf-namespace/pch.h)
-
-# window-demo
-add_executable(window-demo src/window-demo.cpp)
-target_precompile_headers(window-demo PRIVATE src/folf-namespace/pch.h)
