@@ -4,6 +4,10 @@
 build/
 # vsc config files
 .vs/
+CMakeSettings.json
+*.sln
+*.vcxitems
 # windows cmake files and cache
 out/
+# linux ImGUI files
 imgui.ini
