@@ -4,9 +4,10 @@ FOLF is a namespace used by some perople to develop and test new algorythms. It 
 
 # why?
 
-Because two people wanted to do some c++ together.
+Because two friends wanted to do some c++ together.
 
 # how can you use this?
-this namespace is licensed under MIT, so everyone can use it's contents to skip writing common functions.
-more information can be found inside the License:
-https://github.com/MCWertGaming/folf-namespace/blob/master/LICENSE
+this namespace is licensed under MIT, so everyone can use it's content as long, as he rspects the License.
+
+# License
+FOLF is Licenced under the terms od MIT. The License can be found [here](https://github.com/MCWertGaming/folf-namespace/blob/master/LICENSE).
