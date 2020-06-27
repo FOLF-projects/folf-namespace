@@ -49,4 +49,52 @@ namespace folf
         void printTimeMilliseconds();
         void printTimeSeconds();
     };
+
+    class numberOperations
+    {
+    public:
+        numberOperations();
+        ~numberOperations();
+        // TODO create squareroot function
+
+    private:
+        // var
+    };
+
+    numberOperations::numberOperations()
+    {
+    }
+
+    numberOperations::~numberOperations()
+    {
+    }
+
+    class timeCalcualtion
+    {
+    public:
+        timeCalcualtion();
+        ~timeCalcualtion();
+        // functions for converting time
+        double daysToHours(double*);
+        double daysToMinutes(double*);
+        double daysToSeconds(double*);
+        double hoursToDays(double*);
+        double hoursToMinutes(double*);
+        double hoursToSeconds(double*);
+        double minutesToDays(double*);
+        double minutesToHours(double*);
+        double minutesToSeconds(double*);
+        double minutesToMilliseconds(double*);
+        double secondsToHours(double*);
+        double secondsToMinutes(double*);
+        double secondsToMilliseconds(double*);
+        double secondsToMicroseconds(double*);
+        double millisecondsToMinutes(double*);
+        double millisecondsToSeconds(double*);
+        double millisecondsToMicroseconds(double*);
+        double microsecondsToSeconds(double*);
+        double microsecondsToMilliseconds(double*);
+    private:
+        // stuff
+    };
 }

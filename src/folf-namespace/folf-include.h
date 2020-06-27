@@ -8,3 +8,4 @@
 // source files for the functione
 #include "benchmarking.cpp"
 #include "prime.cpp"
+#include "timeCalculation.cpp"
