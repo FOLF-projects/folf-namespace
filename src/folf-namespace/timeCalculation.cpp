@@ -22,11 +22,11 @@ double folf::timeCalcualtion::daysToHours(double* days)
 }
 double folf::timeCalcualtion::daysToMinutes(double* days)
 {
-	return (*days * 24) * 60;
+	return *days * 1440;
 }
 double folf::timeCalcualtion::daysToSeconds(double* days)
 {
-	return ((*days * 24) * 60) * 60;
+	return *days * 86400;
 
 }
 double folf::timeCalcualtion::hoursToDays(double* hours)
@@ -39,11 +39,11 @@ double folf::timeCalcualtion::hoursToMinutes(double* hours)
 }
 double folf::timeCalcualtion::hoursToSeconds(double* hours)
 {
-	return (*hours * 60) * 60;
+	return *hours * 3600;
 }
 double folf::timeCalcualtion::minutesToDays(double* minutes)
 {
-	return (*minutes / 60) / 24;
+	return *minutes / 1440;
 }
 double folf::timeCalcualtion::minutesToHours(double* minutes)
 {
@@ -55,11 +55,11 @@ double folf::timeCalcualtion::minutesToSeconds(double* minutes)
 }
 double folf::timeCalcualtion::minutesToMilliseconds(double* minutes)
 {
-	return (*minutes * 60) * 1000;
+	return *minutes * 60000;
 }
 double folf::timeCalcualtion::secondsToHours(double* seconds)
 {
-	return (*seconds / 60) / 60;
+	return *seconds / 3600;
 }
 double folf::timeCalcualtion::secondsToMinutes(double* seconds)
 {
@@ -71,11 +71,11 @@ double folf::timeCalcualtion::secondsToMilliseconds(double* seconds)
 }
 double folf::timeCalcualtion::secondsToMicroseconds(double* seconds)
 {
-	return (*seconds * 1000) * 1000;
+	return *seconds * 1000000;
 }
 double folf::timeCalcualtion::millisecondsToMinutes(double* milliseconds)
 {
-	return (*milliseconds / 1000) / 60;
+	return *milliseconds / 60000;
 }
 double folf::timeCalcualtion::millisecondsToSeconds(double* milliseconds)
 {
@@ -87,7 +87,7 @@ double folf::timeCalcualtion::millisecondsToMicroseconds(double* milliseconds)
 }
 double folf::timeCalcualtion::microsecondsToSeconds(double* microseconds)
 {
-	return (*microseconds / 1000) / 1000;
+	return *microseconds / 1000000;
 }
 double folf::timeCalcualtion::microsecondsToMilliseconds(double* microseconds)
 {
