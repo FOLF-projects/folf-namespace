@@ -2,7 +2,7 @@
 // for static (never changing) libaries
 // only included inside folf namespace
 
-// compile this file only once
+// compile the standard libaties only once
 #pragma once
 // libaries
 #include <iostream>

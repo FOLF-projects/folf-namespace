@@ -1,9 +1,9 @@
 // folf namespace - by a fox and a wolf :D
-// contains all funktions used inside the repositories programms
+// contains all functions used by our programms
 // and some benchmarking functions
 // licenced under MIT on GitHub
 // https://github.com/MCWertGaming/folf-namespace
-// by Damon Leven and Admiral Emser
+// by Damon Leven and AdmiralEmser
 
 // includes precompiled headers
 #include "pch.h"
