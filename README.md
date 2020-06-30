@@ -1,13 +1,11 @@
 # FOLF - a C++ library written by a fox and a wolf
+FOLF is a namespace used by some perople to develop and test new algorithms. It features many benchmarking features and some small algorithms to make our life easier. Everything works on Windows and Linux. Other OSs might work as well, but we can't guarantee this or offer support for those OSs. 
 
-FOLF is a namespace used by some perople to develop and test new algorythms. It features many benchmarking features and some smal algorythms to make our life easier. Everything works on Windows and Linux (other systems should work too, but are not suported and possibly not tested)
+# Why?
+Because two friends want to do some C++ together.
 
-# why?
-
-Because two friends wanted to do some c++ together.
-
-# how can you use this?
-this namespace is licensed under MIT, so everyone can use it's content as long, as he rspects the License.
+# Am I allowed to use it?
+According to its license (MIT), everyone can use it under the terms of the license.
 
 # License
-FOLF is Licenced under the terms od MIT. The License can be found [here](https://github.com/MCWertGaming/folf-namespace/blob/master/LICENSE).
+FOLF is licensed under [MIT](https://github.com/MCWertGaming/folf-namespace/blob/master/LICENSE).
