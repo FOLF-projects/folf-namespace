@@ -9,87 +9,87 @@
 // 1 / 1000 = 0,001
 
 
-folf::timeCalcualtion::timeCalcualtion()
+folf::timeCalculation::timeCalculation()
 {
 }
-folf::timeCalcualtion::~timeCalcualtion()
+folf::timeCalculation::~timeCalculation()
 {
 }
-double folf::timeCalcualtion::daysToHours(double* days)
+double folf::timeCalculation::daysToHours(double* days)
 {
 	return *days * 24;
 
 }
-double folf::timeCalcualtion::daysToMinutes(double* days)
+double folf::timeCalculation::daysToMinutes(double* days)
 {
 	return *days * 1440;
 }
-double folf::timeCalcualtion::daysToSeconds(double* days)
+double folf::timeCalculation::daysToSeconds(double* days)
 {
 	return *days * 86400;
 
 }
-double folf::timeCalcualtion::hoursToDays(double* hours)
+double folf::timeCalculation::hoursToDays(double* hours)
 {
 	return *hours / 24;
 }
-double folf::timeCalcualtion::hoursToMinutes(double* hours)
+double folf::timeCalculation::hoursToMinutes(double* hours)
 {
 	return *hours * 60;
 }
-double folf::timeCalcualtion::hoursToSeconds(double* hours)
+double folf::timeCalculation::hoursToSeconds(double* hours)
 {
 	return *hours * 3600;
 }
-double folf::timeCalcualtion::minutesToDays(double* minutes)
+double folf::timeCalculation::minutesToDays(double* minutes)
 {
 	return *minutes / 1440;
 }
-double folf::timeCalcualtion::minutesToHours(double* minutes)
+double folf::timeCalculation::minutesToHours(double* minutes)
 {
 	return *minutes / 60;
 }
-double folf::timeCalcualtion::minutesToSeconds(double* minutes)
+double folf::timeCalculation::minutesToSeconds(double* minutes)
 {
 	return *minutes * 60;
 }
-double folf::timeCalcualtion::minutesToMilliseconds(double* minutes)
+double folf::timeCalculation::minutesToMilliseconds(double* minutes)
 {
 	return *minutes * 60000;
 }
-double folf::timeCalcualtion::secondsToHours(double* seconds)
+double folf::timeCalculation::secondsToHours(double* seconds)
 {
 	return *seconds / 3600;
 }
-double folf::timeCalcualtion::secondsToMinutes(double* seconds)
+double folf::timeCalculation::secondsToMinutes(double* seconds)
 {
 	return *seconds / 60;
 }
-double folf::timeCalcualtion::secondsToMilliseconds(double* seconds)
+double folf::timeCalculation::secondsToMilliseconds(double* seconds)
 {
 	return *seconds * 1000;
 }
-double folf::timeCalcualtion::secondsToMicroseconds(double* seconds)
+double folf::timeCalculation::secondsToMicroseconds(double* seconds)
 {
 	return *seconds * 1000000;
 }
-double folf::timeCalcualtion::millisecondsToMinutes(double* milliseconds)
+double folf::timeCalculation::millisecondsToMinutes(double* milliseconds)
 {
 	return *milliseconds / 60000;
 }
-double folf::timeCalcualtion::millisecondsToSeconds(double* milliseconds)
+double folf::timeCalculation::millisecondsToSeconds(double* milliseconds)
 {
 	return *milliseconds / 1000;
 }
-double folf::timeCalcualtion::millisecondsToMicroseconds(double* milliseconds)
+double folf::timeCalculation::millisecondsToMicroseconds(double* milliseconds)
 {
 	return *milliseconds / 1000;
 }
-double folf::timeCalcualtion::microsecondsToSeconds(double* microseconds)
+double folf::timeCalculation::microsecondsToSeconds(double* microseconds)
 {
 	return *microseconds / 1000000;
 }
-double folf::timeCalcualtion::microsecondsToMilliseconds(double* microseconds)
+double folf::timeCalculation::microsecondsToMilliseconds(double* microseconds)
 {
 	return *microseconds / 1000;
 }

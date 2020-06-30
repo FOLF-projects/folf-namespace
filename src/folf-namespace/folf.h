@@ -69,11 +69,11 @@ namespace folf
     {
     }
 
-    class timeCalcualtion
+    class timeCalculation
     {
     public:
-        timeCalcualtion();
-        ~timeCalcualtion();
+        timeCalculation();
+        ~timeCalculation();
         // functions for converting time
         double daysToHours(double*);
         double daysToMinutes(double*);
