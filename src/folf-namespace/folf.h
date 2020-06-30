@@ -73,4 +73,13 @@ namespace folf
         double microsecondsToSeconds(double*);
         double microsecondsToMilliseconds(double*);
     }
+
+    // get random numbers
+    namespace random
+    {
+        // returns true or false based on chance. input equals chance (1/x)
+        bool isChance(int*);
+        // returns a random number up to x
+        int randomNum(int*);
+    }
 }

@@ -9,3 +9,4 @@
 #include "benchmarking.cpp"
 #include "prime.cpp"
 #include "timeCalculation.cpp"
+#include "random.cpp"
