@@ -8,6 +8,8 @@
 #include <iostream>
 #include <chrono>
 #include "omp.h"
+#include <ctime>
+#include <random>
 // libaries only for linux
 #if defined(__linux__)
     #include <math.h>
