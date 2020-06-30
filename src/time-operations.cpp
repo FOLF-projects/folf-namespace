@@ -1,4 +1,4 @@
-// time operation benchmark
+// time operations benchmark
 // developed by Damon Leven and Admiral Emser
 // see for licence details (MIT) at its official distribution:
 // https://github.com/MCWertGaming/stuff-with-AdmiralEmser
