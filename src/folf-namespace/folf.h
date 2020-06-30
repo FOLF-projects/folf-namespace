@@ -49,32 +49,10 @@ namespace folf
         void printTimeMilliseconds();
         void printTimeSeconds();
     };
-
-    class numberOperations
+    
+    // serves time-related functions
+    namespace timeCalculation
     {
-    public:
-        numberOperations();
-        ~numberOperations();
-        // TODO create squareroot function
-
-    private:
-        // var
-    };
-
-    numberOperations::numberOperations()
-    {
-    }
-
-    numberOperations::~numberOperations()
-    {
-    }
-
-    class timeCalculation
-    {
-    public:
-        timeCalculation();
-        ~timeCalculation();
-        // functions for converting time
         double daysToHours(double*);
         double daysToMinutes(double*);
         double daysToSeconds(double*);
@@ -94,7 +72,5 @@ namespace folf
         double millisecondsToMicroseconds(double*);
         double microsecondsToSeconds(double*);
         double microsecondsToMilliseconds(double*);
-    private:
-        // stuff
-    };
+    }
 }

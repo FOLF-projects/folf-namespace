@@ -1,13 +1,6 @@
 // time class source
 #include "folf.h"
 
-
-folf::timeCalculation::timeCalculation()
-{
-}
-folf::timeCalculation::~timeCalculation()
-{
-}
 double folf::timeCalculation::daysToHours(double* days)
 {
 	return *days * 24;
