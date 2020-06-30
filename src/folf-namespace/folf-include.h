@@ -3,9 +3,9 @@
 
 // only compile all sources if they changed
 #pragma once
-// main herder with all classes
+// main header with all classes
 #include "folf.h"
-// source files for the functione
+// source files
 #include "benchmarking.cpp"
 #include "prime.cpp"
 #include "timeCalculation.cpp"

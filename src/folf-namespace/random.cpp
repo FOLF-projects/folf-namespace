@@ -1,3 +1,4 @@
+// random namespace functions
 #include "folf.h"
 
 int folf::random::randomNum(int *maxNum) {

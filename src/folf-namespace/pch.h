@@ -1,20 +1,20 @@
 // precompiled header
-// for static (never changing) libaries
+// for static (never changing) libraries
 // only included inside folf namespace
 
-// compile this file only once
+// compile the standard libraries only once
 #pragma once
-// libaries
+// libraries
 #include <iostream>
 #include <chrono>
 #include "omp.h"
 #include <ctime>
 #include <random>
-// libaries only for linux
+// libraries only for linux
 #if defined(__linux__)
     #include <math.h>
 #endif
-// libaries for windows only
+// libraries for windows only
 // #if defined(__windows__)
     // stuff
 // #endif

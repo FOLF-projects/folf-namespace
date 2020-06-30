@@ -1,15 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 # versions below 1.16 don't suport precompiled headers
 
-# ===
-# template
-# ---
-# project (project)
-# set (CMAKE_CXX_FLAGS "Compiler flags")
-# add_executable(executable path/to/file)
-# target_precompile_headers(sample PRIVATE src/libfox/pch.h)
-# ===
-
 project(folf-namespace)
 
 # compile options
@@ -23,8 +14,6 @@ endif()
 # prime-sum-benchmark
 add_executable(prime-sum-benchmark src/prime-sum-benchmark.cpp)
 target_precompile_headers(prime-sum-benchmark PRIVATE src/folf-namespace/pch.h)
-
-# number operations
 
 # time operations
 add_executable(time-operations src/time-operations.cpp)

@@ -1,7 +1,7 @@
 // time operations benchmark
-// developed by Damon Leven and Admiral Emser
+// developed by Damon Leven and AdmiralEmser
 // see for licence details (MIT) at its official distribution:
-// https://github.com/MCWertGaming/stuff-with-AdmiralEmser
+// https://github.com/MCWertGaming/folf-namespace
 
 // #include "pch.h" // includes precompiled header with 
 #include "folf-namespace/folf-include.h"

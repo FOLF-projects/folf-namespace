@@ -1,3 +1,4 @@
+// prime class functions
 #include "folf.h"
 
 folf::prime::prime()

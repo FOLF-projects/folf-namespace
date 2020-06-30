@@ -1,4 +1,4 @@
-// time class source
+// timeCalculation namespace functions
 #include "folf.h"
 
 double folf::timeCalculation::daysToHours(double* days)

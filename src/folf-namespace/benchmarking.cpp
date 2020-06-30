@@ -1,3 +1,4 @@
+// benchmarking class functions
 #include "folf.h"
 
 folf::benchmarking::benchmarking()
