@@ -23,3 +23,8 @@ endif()
 # prime-sum-benchmark
 add_executable(prime-sum-benchmark src/prime-sum-benchmark.cpp)
 target_precompile_headers(prime-sum-benchmark PRIVATE src/folf-namespace/pch.h)
+
+# number operations
+
+# time operations
+add_executable(time-operations src/time-operations.cpp)

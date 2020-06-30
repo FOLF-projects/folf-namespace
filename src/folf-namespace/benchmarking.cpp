@@ -26,7 +26,6 @@ long double folf::benchmarking::getSeconds()
 {
     return getMicroseconds() / 1000000;
 }
-
 void folf::benchmarking::printTimeMicroseconds()
 {
     std::cout << "Time: " << getMicroseconds() << " microseconds" << std::endl;

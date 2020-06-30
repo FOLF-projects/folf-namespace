@@ -49,4 +49,28 @@ namespace folf
         void printTimeMilliseconds();
         void printTimeSeconds();
     };
+    
+    // serves time-related functions
+    namespace timeCalculation
+    {
+        double daysToHours(double*);
+        double daysToMinutes(double*);
+        double daysToSeconds(double*);
+        double hoursToDays(double*);
+        double hoursToMinutes(double*);
+        double hoursToSeconds(double*);
+        double minutesToDays(double*);
+        double minutesToHours(double*);
+        double minutesToSeconds(double*);
+        double minutesToMilliseconds(double*);
+        double secondsToHours(double*);
+        double secondsToMinutes(double*);
+        double secondsToMilliseconds(double*);
+        double secondsToMicroseconds(double*);
+        double millisecondsToMinutes(double*);
+        double millisecondsToSeconds(double*);
+        double millisecondsToMicroseconds(double*);
+        double microsecondsToSeconds(double*);
+        double microsecondsToMilliseconds(double*);
+    }
 }
