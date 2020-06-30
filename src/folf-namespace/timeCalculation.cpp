@@ -1,13 +1,6 @@
 // time class source
 #include "folf.h"
 
-// multiplicator/divisor for 1 = 60 (and extended to full double size, otherwise it doesnt work on windows)
-// 1 / 60 = 60
-// multiplicator/divisor for 1 = 24 (and extended to full double size, otherwise it doesnt work on windows)
-// 1 / 24 = 24
-// multiplicator/divisor for 1 = 1000
-// 1 / 1000 = 0,001
-
 
 folf::timeCalculation::timeCalculation()
 {
