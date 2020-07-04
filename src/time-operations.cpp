@@ -8,7 +8,7 @@
 
 int main()
 {
-    double days = 9.97879;
+    long double days = 9.97879;
     double newDays = 9.97879;
     std::cout << "num = " << folf::timeCalculation::daysToHours(&days) << std::endl;
     std::cout << "NewNum = " << newDays * 24 << std::endl;
