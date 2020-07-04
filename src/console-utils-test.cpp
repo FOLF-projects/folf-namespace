@@ -15,7 +15,6 @@ void timer(bool* finished)
     #endif
     *finished = true;
 }
-
 int main()
 {
     bool finished = false;

@@ -65,7 +65,6 @@ namespace folf
         long double microsecondsToSeconds(long double*);
         long double microsecondsToMilliseconds(long double*);
     }
-
     // get random numbers
     namespace random
     {
@@ -74,7 +73,6 @@ namespace folf
         // returns a random number up to x
         int randomNum(int*);
     }
-
     namespace consoleUtils
     {
         void simpleLoadingAnimation(std::string, bool*);

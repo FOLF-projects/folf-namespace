@@ -4,7 +4,6 @@
 long double folf::timeCalculation::daysToHours(long double* days)
 {
 	return *days * 24;
-
 }
 long double folf::timeCalculation::daysToMinutes(long double* days)
 {
@@ -13,7 +12,6 @@ long double folf::timeCalculation::daysToMinutes(long double* days)
 long double folf::timeCalculation::daysToSeconds(long double* days)
 {
 	return *days * 86400;
-
 }
 long double folf::timeCalculation::hoursToDays(long double* hours)
 {
