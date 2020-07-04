@@ -1,81 +1,81 @@
 // timeCalculation namespace functions
 #include "folf.h"
 
-double folf::timeCalculation::daysToHours(double* days)
+long double folf::timeCalculation::daysToHours(long double* days)
 {
 	return *days * 24;
 
 }
-double folf::timeCalculation::daysToMinutes(double* days)
+long double folf::timeCalculation::daysToMinutes(long double* days)
 {
 	return *days * 1440;
 }
-double folf::timeCalculation::daysToSeconds(double* days)
+long double folf::timeCalculation::daysToSeconds(long double* days)
 {
 	return *days * 86400;
 
 }
-double folf::timeCalculation::hoursToDays(double* hours)
+long double folf::timeCalculation::hoursToDays(long double* hours)
 {
 	return *hours / 24;
 }
-double folf::timeCalculation::hoursToMinutes(double* hours)
+long double folf::timeCalculation::hoursToMinutes(long double* hours)
 {
 	return *hours * 60;
 }
-double folf::timeCalculation::hoursToSeconds(double* hours)
+long double folf::timeCalculation::hoursToSeconds(long double* hours)
 {
 	return *hours * 3600;
 }
-double folf::timeCalculation::minutesToDays(double* minutes)
+long double folf::timeCalculation::minutesToDays(long double* minutes)
 {
 	return *minutes / 1440;
 }
-double folf::timeCalculation::minutesToHours(double* minutes)
+long double folf::timeCalculation::minutesToHours(long double* minutes)
 {
 	return *minutes / 60;
 }
-double folf::timeCalculation::minutesToSeconds(double* minutes)
+long double folf::timeCalculation::minutesToSeconds(long double* minutes)
 {
 	return *minutes * 60;
 }
-double folf::timeCalculation::minutesToMilliseconds(double* minutes)
+long double folf::timeCalculation::minutesToMilliseconds(long double* minutes)
 {
 	return *minutes * 60000;
 }
-double folf::timeCalculation::secondsToHours(double* seconds)
+long double folf::timeCalculation::secondsToHours(long double* seconds)
 {
 	return *seconds / 3600;
 }
-double folf::timeCalculation::secondsToMinutes(double* seconds)
+long double folf::timeCalculation::secondsToMinutes(long double* seconds)
 {
 	return *seconds / 60;
 }
-double folf::timeCalculation::secondsToMilliseconds(double* seconds)
+long double folf::timeCalculation::secondsToMilliseconds(long double* seconds)
 {
 	return *seconds * 1000;
 }
-double folf::timeCalculation::secondsToMicroseconds(double* seconds)
+long double folf::timeCalculation::secondsToMicroseconds(long double* seconds)
 {
 	return *seconds * 1000000;
 }
-double folf::timeCalculation::millisecondsToMinutes(double* milliseconds)
+long double folf::timeCalculation::millisecondsToMinutes(long double* milliseconds)
 {
 	return *milliseconds / 60000;
 }
-double folf::timeCalculation::millisecondsToSeconds(double* milliseconds)
+long double folf::timeCalculation::millisecondsToSeconds(long double* milliseconds)
 {
 	return *milliseconds / 1000;
 }
-double folf::timeCalculation::millisecondsToMicroseconds(double* milliseconds)
+long double folf::timeCalculation::millisecondsToMicroseconds(long double* milliseconds)
 {
 	return *milliseconds / 1000;
 }
-double folf::timeCalculation::microsecondsToSeconds(double* microseconds)
+long double folf::timeCalculation::microsecondsToSeconds(long double* microseconds)
 {
 	return *microseconds / 1000000;
 }
-double folf::timeCalculation::microsecondsToMilliseconds(double* microseconds)
+long double folf::timeCalculation::microsecondsToMilliseconds(long double* microseconds)
 {
 	return *microseconds / 1000;
 }

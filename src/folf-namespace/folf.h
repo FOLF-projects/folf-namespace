@@ -53,25 +53,25 @@ namespace folf
     // serves time-related functions
     namespace timeCalculation
     {
-        double daysToHours(double*);
-        double daysToMinutes(double*);
-        double daysToSeconds(double*);
-        double hoursToDays(double*);
-        double hoursToMinutes(double*);
-        double hoursToSeconds(double*);
-        double minutesToDays(double*);
-        double minutesToHours(double*);
-        double minutesToSeconds(double*);
-        double minutesToMilliseconds(double*);
-        double secondsToHours(double*);
-        double secondsToMinutes(double*);
-        double secondsToMilliseconds(double*);
-        double secondsToMicroseconds(double*);
-        double millisecondsToMinutes(double*);
-        double millisecondsToSeconds(double*);
-        double millisecondsToMicroseconds(double*);
-        double microsecondsToSeconds(double*);
-        double microsecondsToMilliseconds(double*);
+        long double daysToHours(long double*);
+        long double daysToMinutes(long double*);
+        long double daysToSeconds(long double*);
+        long double hoursToDays(long double*);
+        long double hoursToMinutes(long double*);
+        long double hoursToSeconds(long double*);
+        long double minutesToDays(long double*);
+        long double minutesToHours(long double*);
+        long double minutesToSeconds(long double*);
+        long double minutesToMilliseconds(long double*);
+        long double secondsToHours(long double*);
+        long double secondsToMinutes(long double*);
+        long double secondsToMilliseconds(long double*);
+        long double secondsToMicroseconds(long double*);
+        long double millisecondsToMinutes(long double*);
+        long double millisecondsToSeconds(long double*);
+        long double millisecondsToMicroseconds(long double*);
+        long double microsecondsToSeconds(long double*);
+        long double microsecondsToMilliseconds(long double*);
     }
 
     // get random numbers
