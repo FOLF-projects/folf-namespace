@@ -12,22 +12,15 @@
 // includes various functions for benchmarking and common tasks
 namespace folf
 {
-    class prime
+    namespace prime
     {
-    private:
-        // stores the sum of all generated primes
-        unsigned long long primeSum;
-        // tests a given number if its a prime
-        bool testPrime(unsigned long long*);
-    public:
-        prime();
-        ~prime();
-        // generates all primes from 1 to a given number
-        void genPrime(unsigned long long*);
-        // returns the sum of all generated prime numbers
-        unsigned long long getSum();
-    };
-
+        // tests, if the given number is a Prime
+        bool testPrime(unsigned long long* num);
+        // Calcualtes all Primes to a given number together - Multithreading capable 
+        void primeCalcNew(unsigned long long* maxNum, unsigned long long* primeSum);
+        // Calcualtes all Primes to a given number together and returnes the result
+        unsigned long long primeCalcLegacy(unsigned long long* maxNum);
+    }
     class benchmarking
     {
     private:
@@ -41,15 +34,14 @@ namespace folf
         // set stoptime
         void setStopTime();
         // calculate taken time
-        unsigned long long getMicroseconds();
-        unsigned long long getMilliseconds();
+        long double getMicroseconds();
+        long double getMilliseconds();
         long double getSeconds();
         // returns taken time
         void printTimeMicroseconds();
         void printTimeMilliseconds();
         void printTimeSeconds();
     };
-    
     // serves time-related functions
     namespace timeCalculation
     {
@@ -81,5 +73,10 @@ namespace folf
         bool isChance(int*);
         // returns a random number up to x
         int randomNum(int*);
+    }
+
+    namespace consoleUtils
+    {
+        void simpleLoadingAnimation(std::string, bool*);
     }
 }
