@@ -16,7 +16,7 @@ namespace folf
     {
         // tests, if the given number is a Prime
         bool testPrime(unsigned long long* num);
-        // Calcualtes all Primes to a given number together - Multithreading capable 
+        // Calcualtes all Primes to a given number together - Multithreading capable
         void primeCalcNew(unsigned long long* maxNum, unsigned long long* primeSum);
     }
     namespace timeOperations
