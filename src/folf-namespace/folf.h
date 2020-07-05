@@ -21,14 +21,26 @@ namespace folf
         // Calcualtes all Primes to a given number together and returnes the result
         unsigned long long primeCalcLegacy(unsigned long long* maxNum);
     }
-    class benchmarking
+    namespace timeOperations
+    {
+        std::chrono::time_point<std::chrono::high_resolution_clock> getTimestamp();
+    }
+    class timeBench
+    {
+    private:
+        std::chrono::time_point<std::chrono::high_resolution_clock> startTime;
+    public:
+        timeBench();
+        ~timeBench();
+    };
+    class TimeBenchLegacy
     {
     private:
         // stores the timestamps
         std::chrono::time_point<std::chrono::high_resolution_clock> startTime, stopTime;
     public:
-        benchmarking();
-        ~benchmarking();
+        TimeBenchLegacy();
+        ~TimeBenchLegacy();
         // set start time
         void setStartTime();
         // set stoptime
