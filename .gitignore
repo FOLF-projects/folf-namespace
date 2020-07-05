@@ -1,5 +1,7 @@
 # vscode config files
 .vscode/
+# vscode remote sontainer files
+.devcontainer/
 # linux cmake files and cache
 build/
 # vsc config files
