@@ -3,7 +3,6 @@
 // see for licence details (MIT) at its official distribution:
 // https://github.com/MCWertGaming/folf-namespace
 
-// #include "pch.h" // includes precompiled header with
 #include "folf-namespace/folf-include.h"
 
 void primeFunction(unsigned long long* maxNumber,unsigned long long* primeSum, bool* finished)
