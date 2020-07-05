@@ -18,8 +18,6 @@ namespace folf
         bool testPrime(unsigned long long* num);
         // Calcualtes all Primes to a given number together - Multithreading capable 
         void primeCalcNew(unsigned long long* maxNum, unsigned long long* primeSum);
-        // Calcualtes all Primes to a given number together and returnes the result
-        unsigned long long primeCalcLegacy(unsigned long long* maxNum);
     }
     namespace timeOperations
     {
@@ -32,27 +30,6 @@ namespace folf
     public:
         timeBench();
         ~timeBench();
-    };
-    class TimeBenchLegacy
-    {
-    private:
-        // stores the timestamps
-        std::chrono::time_point<std::chrono::high_resolution_clock> startTime, stopTime;
-    public:
-        TimeBenchLegacy();
-        ~TimeBenchLegacy();
-        // set start time
-        void setStartTime();
-        // set stoptime
-        void setStopTime();
-        // calculate taken time
-        long double getMicroseconds();
-        long double getMilliseconds();
-        long double getSeconds();
-        // returns taken time
-        void printTimeMicroseconds();
-        void printTimeMilliseconds();
-        void printTimeSeconds();
     };
     // serves time-related functions
     namespace timeCalculation
@@ -88,5 +65,31 @@ namespace folf
     namespace consoleUtils
     {
         void simpleLoadingAnimation(std::string, bool*);
+    }
+    namespace legacy
+    {
+        class TimeBenchLegacy
+        {
+        private:
+            // stores the timestamps
+            std::chrono::time_point<std::chrono::high_resolution_clock> startTime, stopTime;
+        public:
+            TimeBenchLegacy();
+            ~TimeBenchLegacy();
+            // set start time
+            void setStartTime();
+            // set stoptime
+            void setStopTime();
+            // calculate taken time
+            long double getMicroseconds();
+            long double getMilliseconds();
+            long double getSeconds();
+            // returns taken time
+            void printTimeMicroseconds();
+            void printTimeMilliseconds();
+            void printTimeSeconds();
+        };
+        // Calcualtes all Primes to a given number together and returnes the result
+        unsigned long long primeCalcLegacy(unsigned long long* maxNum);
     }
 }
