@@ -17,7 +17,7 @@ void folf::TimeBenchLegacy::setStopTime()
 }
 long double folf::TimeBenchLegacy::getMicroseconds()
 {
-    return std::chrono::time_point_cast<std::chrono::microseconds>(stopTime).time_since_epoch().count() - std::chrono::time_point_cast<std::chrono::microseconds>(startTime).time_since_epoch().count();
+    return std::chrono::time_point_cast<std::chrono::microseconds>(stopTime).time_since_epoch().count() - std::chrono::time_point_cast<std::chrono::microseconds>(startTime).time_since_epoch().count(); // calculates the passed time
 }
 long double folf::TimeBenchLegacy::getMilliseconds()
 {

@@ -21,6 +21,7 @@ namespace folf
     }
     namespace timeOperations
     {
+        // returns the current chrono timestamp
         std::chrono::time_point<std::chrono::high_resolution_clock> getTimestamp();
     }
     class timeBench
@@ -28,7 +29,9 @@ namespace folf
     private:
         std::chrono::time_point<std::chrono::high_resolution_clock> startTime;
     public:
+        // starts time benchmarking
         timeBench();
+        // stops time benchmarking
         ~timeBench();
     };
     // serves time-related functions
@@ -64,10 +67,12 @@ namespace folf
     }
     namespace consoleUtils
     {
+        // creates a simple loading animation
         void simpleLoadingAnimation(std::string, bool*);
     }
     namespace legacy
     {
+        // calculates all numbers to a given number and throws them out - already reworked
         class TimeBenchLegacy
         {
         private:
@@ -89,7 +94,7 @@ namespace folf
             void printTimeMilliseconds();
             void printTimeSeconds();
         };
-        // Calcualtes all Primes to a given number together and returnes the result
+        // Calcualtes all Primes to a given number together and returnes the result - already reworked
         unsigned long long primeCalcLegacy(unsigned long long* maxNum);
     }
 }
