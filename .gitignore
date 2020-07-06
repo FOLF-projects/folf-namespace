@@ -11,3 +11,11 @@ CMakeSettings.json
 out/
 # linux ImGUI files
 imgui.ini
+# CLion Windows files
+cmake-build-release/
+cmake-build-release-visual-studio/
+cmake-build-release-cygwin/
+cmake-build-debug/
+cmake-build-debug-visual-studio/
+cmake-build-debug-cygwin/
+.idea/

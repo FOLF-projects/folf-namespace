@@ -10,11 +10,12 @@
 #include "omp.h"
 #include <ctime>
 #include <random>
+#include <thread>
 // libraries only for linux
 #if defined(__linux__)
     #include <math.h>
-#endif
+    #include <unistd.h>
 // libraries for windows only
-// #if defined(__windows__)
-    // stuff
-// #endif
+#elif (_WIN32)
+    #include <windows.h>
+#endif

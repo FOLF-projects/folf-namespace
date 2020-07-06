@@ -15,17 +15,19 @@ void folf::benchmarking::setStopTime()
 {
     stopTime = std::chrono::high_resolution_clock::now(); // saves stop time
 }
-unsigned long long folf::benchmarking::getMicroseconds()
+long double folf::benchmarking::getMicroseconds()
 {
     return std::chrono::time_point_cast<std::chrono::microseconds>(stopTime).time_since_epoch().count() - std::chrono::time_point_cast<std::chrono::microseconds>(startTime).time_since_epoch().count();
 }
-unsigned long long folf::benchmarking::getMilliseconds()
+long double folf::benchmarking::getMilliseconds()
 {
-    return getMicroseconds() / 1000;
+    long double microseconds = folf::benchmarking::getMicroseconds();
+    return folf::timeCalculation::microsecondsToMilliseconds(&microseconds);
 }
 long double folf::benchmarking::getSeconds()
 {
-    return getMicroseconds() / 1000000;
+    long double microseconds = folf::benchmarking::getMicroseconds();
+    return folf::timeCalculation::microsecondsToSeconds(&microseconds);
 }
 void folf::benchmarking::printTimeMicroseconds()
 {
