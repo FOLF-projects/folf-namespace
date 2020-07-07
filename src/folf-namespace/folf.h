@@ -15,32 +15,24 @@ namespace folf
     namespace prime
     {
         // tests, if the given number is a Prime
-        bool testPrime(unsigned long long* num);
-        // Calcualtes all Primes to a given number together - Multithreading capable 
-        void primeCalcNew(unsigned long long* maxNum, unsigned long long* primeSum);
-        // Calcualtes all Primes to a given number together and returnes the result
-        unsigned long long primeCalcLegacy(unsigned long long* maxNum);
+        bool checkPrime(unsigned long long* num);
+        // Calcualtes all Primes to a given number together - Multithreading capable
+        void primeSum(unsigned long long* maxNum, unsigned long long* primeSum);
     }
-    class benchmarking
+    namespace timeOperations
+    {
+        // returns the current chrono timestamp
+        std::chrono::time_point<std::chrono::high_resolution_clock> getTimestamp();
+    }
+    class timeBench
     {
     private:
-        // stores the timestamps
-        std::chrono::time_point<std::chrono::high_resolution_clock> startTime, stopTime;
+        std::chrono::time_point<std::chrono::high_resolution_clock> startTime;
     public:
-        benchmarking();
-        ~benchmarking();
-        // set start time
-        void setStartTime();
-        // set stoptime
-        void setStopTime();
-        // calculate taken time
-        long double getMicroseconds();
-        long double getMilliseconds();
-        long double getSeconds();
-        // returns taken time
-        void printTimeMicroseconds();
-        void printTimeMilliseconds();
-        void printTimeSeconds();
+        // starts time benchmarking
+        timeBench();
+        // stops time benchmarking
+        ~timeBench();
     };
     // serves time-related functions
     namespace timeCalculation
@@ -75,6 +67,34 @@ namespace folf
     }
     namespace consoleUtils
     {
+        // creates a simple loading animation
         void simpleLoadingAnimation(std::string, bool*);
+    }
+    namespace legacy
+    {
+        // calculates all numbers to a given number and throws them out - already reworked
+        class TimeBenchLegacy
+        {
+        private:
+            // stores the timestamps
+            std::chrono::time_point<std::chrono::high_resolution_clock> startTime, stopTime;
+        public:
+            TimeBenchLegacy();
+            ~TimeBenchLegacy();
+            // set start time
+            void setStartTime();
+            // set stoptime
+            void setStopTime();
+            // calculate taken time
+            long double getMicroseconds();
+            long double getMilliseconds();
+            long double getSeconds();
+            // returns taken time
+            void printTimeMicroseconds();
+            void printTimeMilliseconds();
+            void printTimeSeconds();
+        };
+        // Calcualtes all Primes to a given number together and returnes the result - already reworked
+        unsigned long long primeSumLegacy(unsigned long long* maxNum);
     }
 }
