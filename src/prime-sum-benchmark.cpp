@@ -8,7 +8,7 @@
 void primeFunction(unsigned long long* maxNumber,unsigned long long* primeSum, bool* finished)
 {
     
-    folf::prime::primeCalcNew(maxNumber, primeSum);
+    folf::prime::primeSum(maxNumber, primeSum);
     *finished = true;
 }
 int main()

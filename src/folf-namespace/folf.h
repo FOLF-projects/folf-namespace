@@ -15,9 +15,9 @@ namespace folf
     namespace prime
     {
         // tests, if the given number is a Prime
-        bool testPrime(unsigned long long* num);
+        bool checkPrime(unsigned long long* num);
         // Calcualtes all Primes to a given number together - Multithreading capable
-        void primeCalcNew(unsigned long long* maxNum, unsigned long long* primeSum);
+        void primeSum(unsigned long long* maxNum, unsigned long long* primeSum);
     }
     namespace timeOperations
     {
@@ -95,6 +95,6 @@ namespace folf
             void printTimeSeconds();
         };
         // Calcualtes all Primes to a given number together and returnes the result - already reworked
-        unsigned long long primeCalcLegacy(unsigned long long* maxNum);
+        unsigned long long primeSumLegacy(unsigned long long* maxNum);
     }
 }

@@ -41,7 +41,7 @@ void folf::TimeBenchLegacy::printTimeSeconds()
 {
     std::cout << "Time: " << getSeconds() << " seconds" << std::endl;
 }
-unsigned long long folf::prime::primeCalcLegacy(unsigned long long* maxNum)
+unsigned long long folf::prime::primeSumLegacy(unsigned long long* maxNum)
 {
     unsigned long long primeSum = 2;
     // OpenMP implementation for multithreading the for loop, completly optional
