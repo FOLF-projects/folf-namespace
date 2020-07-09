@@ -4,7 +4,7 @@
 // https://github.com/FOLF-projects/folf-namespace
 
 // #include "pch.h" // includes precompiled header with 
-#include "folf-namespace/folf-include.h"
+#include "folf-namespace/folf-include.hpp"
 
 int main()
 {

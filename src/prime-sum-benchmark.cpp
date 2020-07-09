@@ -3,7 +3,7 @@
 // see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
 
-#include "folf-namespace/folf-include.h"
+#include "folf-namespace/folf-include.hpp"
 
 void primeFunction(unsigned long long* maxNumber,unsigned long long* primeSum, bool* finished)
 {

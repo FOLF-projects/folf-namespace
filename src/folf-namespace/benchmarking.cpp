@@ -1,5 +1,5 @@
 // benchmarking class functions
-#include "folf.h"
+#include "folf.hpp"
 
 std::chrono::time_point<std::chrono::high_resolution_clock> folf::timeOperations::getTimestamp()
 {

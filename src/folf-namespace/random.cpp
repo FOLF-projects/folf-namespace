@@ -1,5 +1,5 @@
 // random namespace functions
-#include "folf.h"
+#include "folf.hpp"
 
 int folf::random::randomNum(int *maxNum) {
 	std::srand((unsigned)time(0)); // generates a semi-random number based on the current time

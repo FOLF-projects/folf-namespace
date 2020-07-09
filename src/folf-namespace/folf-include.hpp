@@ -4,7 +4,7 @@
 // only compile all sources if they changed
 #pragma once
 // main header with all classes
-#include "folf.h"
+#include "folf.hpp"
 // source files
 #include "benchmarking.cpp"
 #include "prime.cpp"

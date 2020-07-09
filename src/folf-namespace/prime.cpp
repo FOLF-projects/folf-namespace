@@ -1,5 +1,5 @@
 // prime class functions
-#include "folf.h"
+#include "folf.hpp"
 
 bool folf::prime::checkPrime(unsigned long long* num)
 {

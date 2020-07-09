@@ -1,5 +1,5 @@
 // prime class functions
-#include "folf.h"
+#include "folf.hpp"
 
 // two versions are needed due to diffrent sleep() functions on windows and linux
 #if defined(_WIN32)
