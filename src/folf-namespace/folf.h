@@ -2,7 +2,7 @@
 // contains all functions used by our programms
 // and some benchmarking functions
 // licenced under MIT on GitHub
-// https://github.com/MCWertGaming/folf-namespace
+// https://github.com/FOLF-projects/folf-namespace
 // by Damon Leven and AdmiralEmser
 
 // includes precompiled headers

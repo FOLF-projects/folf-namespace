@@ -8,4 +8,4 @@ Because two friends want to do some C++ together.
 According to its license (MIT), everyone can use it under the terms of the license.
 
 # License
-FOLF is licensed under [MIT](https://github.com/MCWertGaming/folf-namespace/blob/master/LICENSE).
+FOLF is licensed under [MIT](https://github.com/FOLF-projects/folf-namespace/blob/master/LICENSE).
