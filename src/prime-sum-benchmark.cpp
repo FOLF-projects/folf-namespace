@@ -1,7 +1,7 @@
 // Prime number calculator C++ benchmarking tool
 // developed by Damon Leven and AdmiralEmser
 // see for licence details (MIT) at its official distribution:
-// https://github.com/MCWertGaming/folf-namespace
+// https://github.com/FOLF-projects/folf-namespace
 
 #include "folf-namespace/folf-include.h"
 
