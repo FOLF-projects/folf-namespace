@@ -1,5 +1,6 @@
 // timeCalculation namespace functions
 #include "folf.hpp"
+#include "pch.hpp"
 
 long double folf::timeCalculation::daysToHours(long double* days)
 {

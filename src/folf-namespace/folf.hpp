@@ -5,8 +5,6 @@
 // https://github.com/FOLF-projects/folf-namespace
 // by Damon Leven and AdmiralEmser
 
-// includes precompiled headers
-#include "pch.hpp"
 // tells the compile to only compile this file again if the content changes
 #pragma once
 // includes various functions for benchmarking and common tasks
