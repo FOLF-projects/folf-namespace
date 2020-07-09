@@ -13,12 +13,12 @@ endif()
 
 # prime-sum-benchmark
 add_executable(prime-sum-benchmark src/prime-sum-benchmark.cpp)
-target_precompile_headers(prime-sum-benchmark PRIVATE src/folf-namespace/pch.h)
+target_precompile_headers(prime-sum-benchmark PRIVATE src/folf-namespace/pch.hpp)
 
 # time operations
 add_executable(time-operations src/time-operations.cpp)
-target_precompile_headers(time-operations PRIVATE src/folf-namespace/pch.h)
+target_precompile_headers(time-operations PRIVATE src/folf-namespace/pch.hpp)
 
 # console-utils
 add_executable(console-utils src/console-utils-test.cpp)
-target_precompile_headers(console-utils PRIVATE src/folf-namespace/pch.h)
+target_precompile_headers(console-utils PRIVATE src/folf-namespace/pch.hpp)
