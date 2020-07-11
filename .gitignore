@@ -4,13 +4,18 @@
 .devcontainer/
 # linux cmake files and cache
 build/
-# vsc config files
+# vs community config and project files
 .vs/
 CMakeSettings.json
 *.sln
 *.vcxitems
+*.vcxproj
+*.filters
 # windows cmake files and cache
 out/
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
 # linux ImGUI files
 imgui.ini
 # CLion Windows files
