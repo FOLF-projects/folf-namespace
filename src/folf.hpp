@@ -7,7 +7,6 @@
 
 // includes
 #include <chrono>
-#include <string>
 // tells the compile to only compile this file again if the content changes
 #pragma once
 // includes various functions for benchmarking and common tasks
@@ -77,7 +76,7 @@ namespace folf
     namespace consoleUtils
     {
         // creates a simple loading animation
-        void simpleLoadingAnimation(std::string, bool*);
+        void simpleLoadingAnimation(const char*, bool*);
     }
     // includes already rewritten functions and classes
     namespace legacy
