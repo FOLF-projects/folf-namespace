@@ -3,47 +3,47 @@
 #include <iostream>
 #include "omp.h"
 
-folf::TimeBenchLegacy::TimeBenchLegacy()
+folf::legacy::TimeBenchLegacy::TimeBenchLegacy()
 {
 }
-folf::TimeBenchLegacy::~TimeBenchLegacy()
+folf::legacy::TimeBenchLegacy::~TimeBenchLegacy()
 {
 }
-void folf::TimeBenchLegacy::setStartTime()
+void folf::legacy::TimeBenchLegacy::setStartTime()
 {
     startTime = std::chrono::high_resolution_clock::now(); // saves start time
 }
-void folf::TimeBenchLegacy::setStopTime()
+void folf::legacy::TimeBenchLegacy::setStopTime()
 {
     stopTime = std::chrono::high_resolution_clock::now(); // saves stop time
 }
-long double folf::TimeBenchLegacy::getMicroseconds()
+long double folf::legacy::TimeBenchLegacy::getMicroseconds()
 {
     return std::chrono::time_point_cast<std::chrono::microseconds>(stopTime).time_since_epoch().count() - std::chrono::time_point_cast<std::chrono::microseconds>(startTime).time_since_epoch().count(); // calculates the passed time
 }
-long double folf::TimeBenchLegacy::getMilliseconds()
+long double folf::legacy::TimeBenchLegacy::getMilliseconds()
 {
-    long double microseconds = folf::TimeBenchLegacy::getMicroseconds();
+    long double microseconds = folf::legacy::TimeBenchLegacy::getMicroseconds();
     return folf::timeCalculation::microsecondsToMilliseconds(&microseconds);
 }
-long double folf::TimeBenchLegacy::getSeconds()
+long double folf::legacy::TimeBenchLegacy::getSeconds()
 {
-    long double microseconds = folf::TimeBenchLegacy::getMicroseconds();
+    long double microseconds = folf::legacy::TimeBenchLegacy::getMicroseconds();
     return folf::timeCalculation::microsecondsToSeconds(&microseconds);
 }
-void folf::TimeBenchLegacy::printTimeMicroseconds()
+void folf::legacy::TimeBenchLegacy::printTimeMicroseconds()
 {
     std::cout << "Time: " << getMicroseconds() << " microseconds" << std::endl;
 }
-void folf::TimeBenchLegacy::printTimeMilliseconds()
+void folf::legacy::TimeBenchLegacy::printTimeMilliseconds()
 {
     std::cout << "Time: " << getMilliseconds() << " milliseconds" << std::endl;
 }
-void folf::TimeBenchLegacy::printTimeSeconds()
+void folf::legacy::TimeBenchLegacy::printTimeSeconds()
 {
     std::cout << "Time: " << getSeconds() << " seconds" << std::endl;
 }
-unsigned long long folf::prime::primeSumLegacy(unsigned long long* maxNum)
+unsigned long long folf::legacy::primeSumLegacy(unsigned long long* maxNum)
 {
     unsigned long long primeSum = 2;
     // OpenMP implementation for multithreading the for loop, completly optional
@@ -52,7 +52,7 @@ unsigned long long folf::prime::primeSumLegacy(unsigned long long* maxNum)
     for (unsigned long long i = 1; i < *maxNum; i += 2)
     {
         // testPrime returns true, if the given number is a Prime
-        if (folf::prime::testPrime(&i) == true)
+        if (folf::prime::checkPrime(&i) == true)
         {
             primeSum = primeSum + i;
         }
