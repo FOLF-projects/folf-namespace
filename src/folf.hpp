@@ -14,7 +14,7 @@ namespace folf
     float folfVersion = 0.1;
     // if true you are using a beta version of FOLF
     bool folfBetaVersion = true;
-    
+    // privides prime number related functions
     namespace prime
     {
         // tests, if the given number is a Prime
@@ -22,11 +22,13 @@ namespace folf
         // Calcualtes all Primes to a given number together - Multithreading capable
         void primeSum(unsigned long long* maxNum, unsigned long long* primeSum);
     }
+    // includes time operation related functions
     namespace timeOperations
     {
         // returns the current chrono timestamp
         std::chrono::time_point<std::chrono::high_resolution_clock> getTimestamp();
     }
+    // writes its lifetime into the console - used for benchmarking
     class timeBench
     {
     private:
@@ -37,7 +39,7 @@ namespace folf
         // stops time benchmarking
         ~timeBench();
     };
-    // serves time-related functions
+    // time conversion and calculation functions
     namespace timeCalculation
     {
         long double daysToHours(long double*);
@@ -60,7 +62,7 @@ namespace folf
         long double microsecondsToSeconds(long double*);
         long double microsecondsToMilliseconds(long double*);
     }
-    // get random numbers
+    // random number related functions
     namespace random
     {
         // returns true or false based on chance. input equals chance (1/x)
@@ -68,11 +70,13 @@ namespace folf
         // returns a random number up to x
         int randomNum(int*);
     }
+    // serval console related functions
     namespace consoleUtils
     {
         // creates a simple loading animation
         void simpleLoadingAnimation(std::string, bool*);
     }
+    // includes already rewritten functions and classes
     namespace legacy
     {
         // calculates all numbers to a given number and throws them out - already reworked
