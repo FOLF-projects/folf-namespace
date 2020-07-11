@@ -10,6 +10,11 @@
 // includes various functions for benchmarking and common tasks
 namespace folf
 {
+    // current version of FOLF
+    float folfVersion = 0.1;
+    // if true you are using a beta version of FOLF
+    bool folfBetaVersion = true;
+    
     namespace prime
     {
         // tests, if the given number is a Prime
