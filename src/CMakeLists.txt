@@ -6,6 +6,7 @@ set(FOLF-source
    ${CMAKE_CURRENT_SOURCE_DIR}/prime.cpp
    ${CMAKE_CURRENT_SOURCE_DIR}/random.cpp
    ${CMAKE_CURRENT_SOURCE_DIR}/timeCalculation.cpp
+   ${CMAKE_CURRENT_SOURCE_DIR}/aboutFolf.cpp
    PARENT_SCOPE
 )
 # optional to precompile FOLF
