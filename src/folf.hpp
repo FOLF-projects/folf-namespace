@@ -66,9 +66,9 @@ namespace folf
     namespace random
     {
         // returns true or false based on chance. input equals chance (1/x)
-        bool isChance(int*);
+        bool isChance(int);
         // returns a random number up to x
-        int randomNum(int*);
+        int randomNum(int);
     }
     // serval console related functions
     namespace consoleUtils
