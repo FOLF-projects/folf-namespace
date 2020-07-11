@@ -1,9 +1,10 @@
 // prime class functions
 #include "folf.hpp"
-#include "pch.hpp"
+#include <iostream>
 
 // two versions are needed due to diffrent sleep() functions on windows and linux
 #if defined(_WIN32)
+#include <windows.h>
 void folf::consoleUtils::simpleLoadingAnimation(std::string message, bool* finished)
 {
     std::cout << message << '-' << std::flush;
@@ -32,6 +33,7 @@ void folf::consoleUtils::simpleLoadingAnimation(std::string message, bool* finis
     std::cout << std::endl;
 }
 #elif (__linux__)
+#include <unistd.h>
 void folf::consoleUtils::simpleLoadingAnimation(std::string message, bool* finished)
 {
     std::cout << message << std::flush << '-' << std::flush;

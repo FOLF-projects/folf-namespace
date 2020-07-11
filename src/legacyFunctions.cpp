@@ -1,6 +1,7 @@
 // source files for already reworked functions
 #include "folf.hpp"
-#include "pch.hpp"
+#include <iostream>
+#include "omp.h"
 
 folf::TimeBenchLegacy::TimeBenchLegacy()
 {

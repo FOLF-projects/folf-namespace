@@ -1,6 +1,7 @@
 // benchmarking class functions
 #include "folf.hpp"
-#include "pch.hpp"
+#include <iostream>
+#include <chrono>
 
 std::chrono::time_point<std::chrono::high_resolution_clock> folf::timeOperations::getTimestamp()
 {
