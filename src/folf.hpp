@@ -5,8 +5,6 @@
 // https://github.com/FOLF-projects/folf-namespace
 // by Damon Leven and AdmiralEmser
 
-// includes
-#include <chrono>
 // tells the compile to only compile this file again if the content changes
 #pragma once
 // includes various functions for benchmarking and common tasks
@@ -28,13 +26,13 @@ namespace folf
     namespace timeOperations
     {
         // returns the current chrono timestamp
-        std::chrono::time_point<std::chrono::high_resolution_clock> getTimestamp();
+        long long getTimestamp();
     }
     // writes its lifetime into the console - used for benchmarking
     class timeBench
     {
     private:
-        std::chrono::time_point<std::chrono::high_resolution_clock> startTime;
+        long long startTime;
     public:
         // starts time benchmarking
         timeBench();
@@ -86,7 +84,7 @@ namespace folf
         {
         private:
             // stores the timestamps
-            std::chrono::time_point<std::chrono::high_resolution_clock> startTime, stopTime;
+            long long startTime, stopTime;
         public:
             TimeBenchLegacy();
             ~TimeBenchLegacy();

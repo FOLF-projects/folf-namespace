@@ -11,15 +11,15 @@ folf::legacy::TimeBenchLegacy::~TimeBenchLegacy()
 }
 void folf::legacy::TimeBenchLegacy::setStartTime()
 {
-    startTime = std::chrono::high_resolution_clock::now(); // saves start time
+    startTime = folf::timeOperations::getTimestamp(); // saves start time
 }
 void folf::legacy::TimeBenchLegacy::setStopTime()
 {
-    stopTime = std::chrono::high_resolution_clock::now(); // saves stop time
+    stopTime = folf::timeOperations::getTimestamp(); // saves stop time
 }
 long double folf::legacy::TimeBenchLegacy::getMicroseconds()
 {
-    return std::chrono::time_point_cast<std::chrono::microseconds>(stopTime).time_since_epoch().count() - std::chrono::time_point_cast<std::chrono::microseconds>(startTime).time_since_epoch().count(); // calculates the passed time
+    return stopTime - startTime; // calculates the passed time
 }
 long double folf::legacy::TimeBenchLegacy::getMilliseconds()
 {
