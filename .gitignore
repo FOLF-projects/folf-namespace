@@ -11,6 +11,8 @@ CMakeSettings.json
 *.vcxitems
 *.vcxproj
 *.filters
+console-utils.dir/
+Debug/
 # windows cmake files and cache
 out/
 CMakeFiles/
