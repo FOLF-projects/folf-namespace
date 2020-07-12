@@ -1,5 +1,5 @@
 // folf namespace - by a fox and a wolf :D
-// contains all functions used by our programms
+// contains all functions used by our programs
 // and some benchmarking functions
 // licenced under MIT on GitHub
 // https://github.com/FOLF-projects/folf-namespace
@@ -14,69 +14,60 @@ namespace folf
     {
         const char* folfVersion();
     }
-    // privides prime number related functions
-    namespace prime
+    namespace numberOperations
     {
-        // tests, if the given number is a Prime
-        bool checkPrime(unsigned long long* num);
-        // Calcualtes all Primes to a given number together - Multithreading capable
-        void primeSum(unsigned long long* maxNum, unsigned long long* primeSum);
-    }
-    // includes time operation related functions
-    namespace timeOperations
-    {
-        // returns the current chrono timestamp
-        long long getTimestamp();
-    }
-    // writes its lifetime into the console - used for benchmarking
-    class timeBench
-    {
-    private:
-        long long startTime;
-    public:
-        // starts time benchmarking
-        timeBench();
-        // stops time benchmarking
-        ~timeBench();
-    };
-    // time conversion and calculation functions
-    namespace timeUtils
-    {
-        long double daysToHours(long double*);
-        long double daysToMinutes(long double*);
-        long double daysToSeconds(long double*);
-        long double hoursToDays(long double*);
-        long double hoursToMinutes(long double*);
-        long double hoursToSeconds(long double*);
-        long double minutesToDays(long double*);
-        long double minutesToHours(long double*);
-        long double minutesToSeconds(long double*);
-        long double minutesToMilliseconds(long double*);
-        long double secondsToHours(long double*);
-        long double secondsToMinutes(long double*);
-        long double secondsToMilliseconds(long double*);
-        long double secondsToMicroseconds(long double*);
-        long double millisecondsToMinutes(long double*);
-        long double millisecondsToSeconds(long double*);
-        long double millisecondsToMicroseconds(long double*);
-        long double microsecondsToSeconds(long double*);
-        long double microsecondsToMilliseconds(long double*);
-        // sleep for the given number of milliseconds
-        void sleepFor(long double);
-    }
-    // random number related functions
-    namespace random
-    {
+        // checks, if the given number is a Prime
+        bool checkPrime(const unsigned long long* num);
+        // Calculates all Primes to a given number together - multithreading capable
+        void primeSum(const unsigned long long* maxNum, unsigned long long* primeSum);
         // returns true or false based on chance. input equals chance (1/x)
         bool isChance(int);
         // returns a random number up to x
         int randomNum(int);
     }
-    // serval console related functions
-    namespace consoleUtils
+    // time conversion and calculation functions
+    namespace timeOperations
+    {
+        long double daysToHours(const long double*);
+        long double daysToMinutes(const long double*);
+        long double daysToSeconds(const long double*);
+        long double hoursToDays(const long double*);
+        long double hoursToMinutes(const long double*);
+        long double hoursToSeconds(const long double*);
+        long double minutesToDays(const long double*);
+        long double minutesToHours(const long double*);
+        long double minutesToSeconds(const long double*);
+        long double minutesToMilliseconds(const long double*);
+        long double secondsToHours(const long double*);
+        long double secondsToMinutes(const long double*);
+        long double secondsToMilliseconds(const long double*);
+        long double secondsToMicroseconds(const long double*);
+        long double millisecondsToMinutes(const long double*);
+        long double millisecondsToSeconds(const long double*);
+        long double millisecondsToMicroseconds(const long double*);
+        long double microsecondsToSeconds(const long double*);
+        long double microsecondsToMilliseconds(const long double*);
+        // sleep for the given number of milliseconds
+        void sleepFor(long double);
+        // returns the current chrono timestamp
+        long double getTimestamp();
+        // writes its lifetime into the console - used for benchmarking
+        class timeBench
+        {
+            private:
+                long double startTime;
+            public:
+                // starts time benchmarking
+                timeBench();
+                // stops time benchmarking
+                ~timeBench();
+        };
+    }
+    // console related functions
+    namespace consoleOperations
     {
         // creates a simple loading animation
-        void simpleLoadingAnimation(const char*, bool*);
+        void simpleLoadingAnimation(const char*, const bool*);
     }
     // includes already rewritten functions and classes
     namespace legacy
@@ -86,24 +77,24 @@ namespace folf
         {
         private:
             // stores the timestamps
-            long long startTime, stopTime;
+            long double startTime{}, stopTime{};
         public:
             TimeBenchLegacy();
             ~TimeBenchLegacy();
             // set start time
             void setStartTime();
-            // set stoptime
+            // set stop time
             void setStopTime();
             // calculate taken time
-            long double getMicroseconds();
-            long double getMilliseconds();
-            long double getSeconds();
+            [[nodiscard]] long double getMicroseconds() const;
+            [[nodiscard]] long double getMilliseconds() const;
+            [[nodiscard]] long double getSeconds() const;
             // returns taken time
-            void printTimeMicroseconds();
-            void printTimeMilliseconds();
-            void printTimeSeconds();
+            void printTimeMicroseconds() const;
+            void printTimeMilliseconds() const;
+            void printTimeSeconds() const;
         };
-        // Calcualtes all Primes to a given number together and returnes the result - already reworked
-        unsigned long long primeSumLegacy(unsigned long long* maxNum);
+        // Calculates all Primes to a given number together and returns the result - already reworked
+        unsigned long long primeSumLegacy(const unsigned long long* maxNum);
     }
 }
