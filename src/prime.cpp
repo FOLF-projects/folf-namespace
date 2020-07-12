@@ -1,9 +1,7 @@
 // prime class functions
 #include "folf.hpp"
 #include "omp.h"
-#if defined(__linux__)
-    #include <math.h>
-#endif
+#include <math.h>
 
 bool folf::prime::checkPrime(unsigned long long* num)
 {

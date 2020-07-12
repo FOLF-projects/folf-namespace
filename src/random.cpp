@@ -1,6 +1,9 @@
 // random namespace functions
 #include "folf.hpp"
 #include <random>
+#if defined (_WIN32)
+	#include <ctime>
+#endif
 
 int folf::random::randomNum(int maxNum) {
 	std::srand((unsigned)time(0)); // generates a semi-random number based on the current time
