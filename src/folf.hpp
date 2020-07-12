@@ -40,7 +40,7 @@ namespace folf
         ~timeBench();
     };
     // time conversion and calculation functions
-    namespace timeCalculation
+    namespace timeUtils
     {
         long double daysToHours(long double*);
         long double daysToMinutes(long double*);
@@ -61,6 +61,8 @@ namespace folf
         long double millisecondsToMicroseconds(long double*);
         long double microsecondsToSeconds(long double*);
         long double microsecondsToMilliseconds(long double*);
+        // sleep for the given number of milliseconds
+        void sleepFor(long double);
     }
     // random number related functions
     namespace random

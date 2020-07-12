@@ -24,12 +24,12 @@ long double folf::legacy::TimeBenchLegacy::getMicroseconds()
 long double folf::legacy::TimeBenchLegacy::getMilliseconds()
 {
     long double microseconds = folf::legacy::TimeBenchLegacy::getMicroseconds();
-    return folf::timeCalculation::microsecondsToMilliseconds(&microseconds);
+    return folf::timeUtils::microsecondsToMilliseconds(&microseconds);
 }
 long double folf::legacy::TimeBenchLegacy::getSeconds()
 {
     long double microseconds = folf::legacy::TimeBenchLegacy::getMicroseconds();
-    return folf::timeCalculation::microsecondsToSeconds(&microseconds);
+    return folf::timeUtils::microsecondsToSeconds(&microseconds);
 }
 void folf::legacy::TimeBenchLegacy::printTimeMicroseconds()
 {
