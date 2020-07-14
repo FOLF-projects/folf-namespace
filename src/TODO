@@ -1,6 +1,0 @@
-implement a method to gather the PCs cores to set multithreading
-add a memory benchmark
-add a allocation benchmark
-add a time benchmark exporter as json
-add function to get the sqareroot of a given number
-add function to properly round numbers
