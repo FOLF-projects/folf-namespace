@@ -5,10 +5,9 @@
 #include <random>
 #include <chrono>
 
-bool folf::numberOperations::checkPrime(const unsigned long long *num) 
+bool folf::numberOperations::checkPrime(const unsigned long long *num)
 {
-    // taking the square root to speed up the loop
-    // placing the result into another variable to save more time (seems like c++ calculates the sqrt on every loop if its inside the case)
+    // taking the square root to speed up the calculation and place the result into another variable to save more time (seems like c++ calculates the sqrt on every loop otherwise)
     double root = sqrt(*num);
     for (int j = 3; j <= root; j += 2) 
     {
@@ -20,7 +19,7 @@ bool folf::numberOperations::checkPrime(const unsigned long long *num)
     }
     return true;
 }
-void folf::numberOperations::primeSum(const unsigned long long *maxNum, unsigned long long *primeSum) 
+void folf::numberOperations::primeSum(const unsigned long long *maxNum, unsigned long long *primeSum)
 {
     unsigned long long primeSumL = 2;
     // OpenMP implementation for multithreading the for loop, completely optional
