@@ -71,7 +71,7 @@ namespace folf
     namespace algorithms
     {
         // The Euclidean algorithm detects the greatest common divisor of two numbers.
-        unsigned int euclidean_algorithm(unsigned int, unsigned int);
+        unsigned short int euclidean_algorithm(unsigned short int, unsigned short int);
     }
     // includes already rewritten functions and classes
     namespace legacy 

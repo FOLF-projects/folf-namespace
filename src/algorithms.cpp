@@ -1,8 +1,6 @@
 #include "folf.hpp"
-#include <iostream>
-#include "omp.h"
 
-unsigned int folf::algorithms::euclidean_algorithm(unsigned int num1, unsigned int num2)
+unsigned short int folf::algorithms::euclidean_algorithm(unsigned short int num1, unsigned short int num2)
 {
     unsigned int temp;
     while (num2 != 0)
