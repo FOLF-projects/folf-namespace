@@ -67,6 +67,12 @@ namespace folf
         // creates a simple loading animation
         void simpleLoadingAnimation(const char *, const bool *);
     }
+    // algorithms of any kind
+    namespace algorithms
+    {
+        // The Euclidean algorithm detects the greatest common divisor of two numbers.
+        unsigned short int euclidean_algorithm(unsigned short int, unsigned short int);
+    }
     // includes already rewritten functions and classes
     namespace legacy 
     {
