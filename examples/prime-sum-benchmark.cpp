@@ -4,6 +4,7 @@
 // https://github.com/FOLF-projects/folf-namespace
 
 #include <folf-namespace/folf.hpp>
+#include <folf-namespace/folf-info.hpp>
 #include <iostream>
 #include <thread>
 
@@ -15,7 +16,7 @@ void primeFunction(unsigned long long *maxNumber, unsigned long long *primeSum, 
 
 int main() 
 {
-    std::cout << "running on Version " << folf::aboutFolf::folfVersion() << " of FOLF" << std::endl;
+    std::cout << "running version " << FOLF_VERSION_COMPLETE << " of FOLF" << std::endl;
     unsigned long long maxNumber = 10000000;
     std::cout << "prime number calculator" << std::endl;
     std::cout << "calculates every prime number up to " << maxNumber << std::endl;
