@@ -1,4 +1,9 @@
-// numberOperation namespace functions
+// ===========================================================
+// includes all features related to number operations
+// developed and distributed by FOLF-projects on GitHub
+// see for licence details (MIT) at its official distribution:
+// https://github.com/FOLF-projects/folf-namespace
+// ===========================================================
 #include "folf.hpp"
 #include <omp.h>
 #include <cmath>
@@ -11,8 +16,8 @@ bool folf::numberOperations::checkPrime(const unsigned long long *num)
     double root = sqrt((double)*num);
     for (int j = 3; j <= root; j += 2)
     {
-        if (*num % j ==
-            0) // result of 0 means its not a prime = it can be devised through another number except 0 and himself
+        // result of 0 means its not a prime = it can be devised through another number except 0 and himself
+        if (*num % j == 0)
         {
             return false;
         }

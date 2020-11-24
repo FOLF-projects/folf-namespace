@@ -1,4 +1,9 @@
-// source files for already reworked functions
+// ===========================================================
+// includes already reworked features of FOLF as small archive
+// developed and distributed by FOLF-projects on GitHub
+// see for licence details (MIT) at its official distribution:
+// https://github.com/FOLF-projects/folf-namespace
+// ===========================================================
 #include "folf.hpp"
 #include <iostream>
 #include <omp.h>

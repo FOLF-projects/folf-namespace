@@ -1,11 +1,9 @@
-// folf namespace - by a fox and a wolf :D
-// contains all functions used by our programs
-// and some benchmarking functions
-// licenced under MIT on GitHub
+// =============================================================================================
+// FOLF - A C++ library developed by a fox and a wolf for testing and making development easier!
+// developed and distributed by FOLF-projects on GitHub
+// see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
-// by Damon Leven and AdmiralEmser
-
-// tells the compile to only compile this file again if the content changes
+// =============================================================================================
 #pragma once
 
 // includes various functions for benchmarking and common tasks

@@ -1,14 +1,19 @@
-// timeOperations namespace functions
+// ===========================================================
+// includes time related features
+// developed and distributed by FOLF-projects on GitHub
+// see for licence details (MIT) at its official distribution:
+// https://github.com/FOLF-projects/folf-namespace
+// ===========================================================
 #include "folf.hpp"
 #include <iostream>
 #include <chrono>
-
 #if defined(_WIN32)
     #include <windows.h>
 #elif (__linux__)
     #include <unistd.h>
 #endif
-long double folf::timeOperations::daysToHours(const long double *days) 
+
+long double folf::timeOperations::daysToHours(const long double *days)
 {
     return *days * 24;
 }
