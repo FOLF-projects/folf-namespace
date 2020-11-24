@@ -3,7 +3,6 @@
 // see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
 
-// #include "pch.h" // includes precompiled header with
 #include <folf-namespace/folf.hpp>
 #include <iostream>
 

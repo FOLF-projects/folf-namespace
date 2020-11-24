@@ -7,7 +7,7 @@ void folf::consoleOperations::simpleLoadingAnimation(const char *message, const 
 {
     std::cout << message << std::flush << '-' << std::flush;
     // draw the animation
-    while (!*finished) 
+    while (!*finished)
     {
         folf::timeOperations::sleepFor(100);
         std::cout << "\b\\" << std::flush;

@@ -13,8 +13,7 @@ void primeFunction(unsigned long long *maxNumber, unsigned long long *primeSum, 
     folf::numberOperations::primeSum(maxNumber, primeSum);
     *finished = true;
 }
-
-int main() 
+int main()
 {
     std::cout << "running version " << FOLF_VERSION_COMPLETE << " of FOLF" << std::endl;
     unsigned long long maxNumber = 10000000;

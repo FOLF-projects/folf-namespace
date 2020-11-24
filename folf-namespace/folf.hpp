@@ -7,13 +7,10 @@
 
 // tells the compile to only compile this file again if the content changes
 #pragma once
+
 // includes various functions for benchmarking and common tasks
 namespace folf 
 {
-    namespace aboutFolf 
-    {
-        const char *folfVersion();
-    }
     namespace numberOperations
     {
         // checks, if the given number is a Prime
@@ -83,8 +80,8 @@ namespace folf
             // stores the timestamps
             long double startTime{}, stopTime{};
         public:
-            TimeBenchLegacy();
-            ~TimeBenchLegacy();
+            TimeBenchLegacy() = default;
+            ~TimeBenchLegacy() = default;
             // set start time
             void setStartTime();
             // set stop time
