@@ -43,8 +43,20 @@ namespace folf
         long double microsecondsToMilliseconds(const long double *);
         // sleep for the given number of milliseconds
         void sleepFor(long double);
+        // a simple timer with additional features
+        class timer
+        {
+        private:
+            unsigned int startTime{};
+            unsigned short int timeToWait{};
+        public:
+            explicit timer(unsigned short int);
+            virtual ~timer() = default;
+            [[nodiscard]] bool done() const;
+            void reset();
+        };
         // returns the current chrono timestamp
-        long double getTimestamp();
+        unsigned int getTimestamp();
         // writes its lifetime into the console - used for benchmarking
         class timeBench {
         private:

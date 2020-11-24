@@ -7,11 +7,6 @@
 #include "folf.hpp"
 #include <iostream>
 #include <chrono>
-#if defined(_WIN32)
-    #include <windows.h>
-#elif (__linux__)
-    #include <unistd.h>
-#endif
 
 long double folf::timeOperations::daysToHours(const long double *days)
 {
@@ -89,16 +84,30 @@ long double folf::timeOperations::microsecondsToMilliseconds(const long double *
 {
     return *microseconds / 1000;
 }
-void folf::timeOperations::sleepFor(long double milliSeconds) 
+void folf::timeOperations::sleepFor(long double milliSeconds)
 {
-    // two versions are needed due to different sleep() functions on windows and linux
-#if defined(_WIN32)
-    Sleep(milliSeconds);
-#elif (__linux__)
-    usleep(folf::timeOperations::millisecondsToMicroseconds(&milliSeconds));
-#endif
+    unsigned int startTime = getTimestamp();
+    long double timeTaken = 0;
+    while (timeTaken / 1000 < milliSeconds)
+    {
+        timeTaken = getTimestamp() - startTime;
+    };
 }
-long double folf::timeOperations::getTimestamp() 
+folf::timeOperations::timer::timer(unsigned short int millisecondsToWait)
+{
+    startTime = getTimestamp();
+    timeToWait = millisecondsToWait;
+}
+bool folf::timeOperations::timer::done() const
+{
+    unsigned int timeTaken = getTimestamp() - startTime;
+    return timeTaken / 1000 > timeToWait;
+}
+void folf::timeOperations::timer::reset()
+{
+    startTime = getTimestamp();
+}
+unsigned int folf::timeOperations::getTimestamp()
 {
     return std::chrono::time_point_cast<std::chrono::microseconds>(
             std::chrono::high_resolution_clock::now()).time_since_epoch().count();
