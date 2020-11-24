@@ -1,19 +1,14 @@
-// folf namespace - by a fox and a wolf :D
-// contains all functions used by our programs
-// and some benchmarking functions
-// licenced under MIT on GitHub
+// =============================================================================================
+// FOLF - A C++ library developed by a fox and a wolf for testing and making development easier!
+// developed and distributed by FOLF-projects on GitHub
+// see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
-// by Damon Leven and AdmiralEmser
-
-// tells the compile to only compile this file again if the content changes
+// =============================================================================================
 #pragma once
+
 // includes various functions for benchmarking and common tasks
 namespace folf 
 {
-    namespace aboutFolf 
-    {
-        const char *folfVersion();
-    }
     namespace numberOperations
     {
         // checks, if the given number is a Prime
@@ -48,8 +43,20 @@ namespace folf
         long double microsecondsToMilliseconds(const long double *);
         // sleep for the given number of milliseconds
         void sleepFor(long double);
+        // a simple timer with additional features
+        class timer
+        {
+        private:
+            unsigned int startTime{};
+            unsigned short int timeToWait{};
+        public:
+            explicit timer(unsigned short int);
+            virtual ~timer() = default;
+            [[nodiscard]] bool done() const;
+            void reset();
+        };
         // returns the current chrono timestamp
-        long double getTimestamp();
+        unsigned int getTimestamp();
         // writes its lifetime into the console - used for benchmarking
         class timeBench {
         private:
@@ -83,8 +90,8 @@ namespace folf
             // stores the timestamps
             long double startTime{}, stopTime{};
         public:
-            TimeBenchLegacy();
-            ~TimeBenchLegacy();
+            TimeBenchLegacy() = default;
+            ~TimeBenchLegacy() = default;
             // set start time
             void setStartTime();
             // set stop time

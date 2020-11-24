@@ -1,4 +1,9 @@
-// prime class functions
+// ===========================================================
+// includes various tools for manipulating the console
+// developed and distributed by FOLF-projects on GitHub
+// see for licence details (MIT) at its official distribution:
+// https://github.com/FOLF-projects/folf-namespace
+// ===========================================================
 #include "folf.hpp"
 #include <iostream>
 
@@ -7,7 +12,7 @@ void folf::consoleOperations::simpleLoadingAnimation(const char *message, const 
 {
     std::cout << message << std::flush << '-' << std::flush;
     // draw the animation
-    while (!*finished) 
+    while (!*finished)
     {
         folf::timeOperations::sleepFor(100);
         std::cout << "\b\\" << std::flush;
