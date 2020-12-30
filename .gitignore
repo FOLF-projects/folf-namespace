@@ -30,3 +30,12 @@ cmake-build-debug-cygwin/
 .idea/
 # Cmake linux files
 .cache/
+Makefile
+examples/Makefile
+#ignore binary files
+*.a
+examples/console-utils-test
+examples/prime-sum-benchmark
+examples/time-operations
+#ignore cmake configured header
+folf-namespace/folf-info.hpp
