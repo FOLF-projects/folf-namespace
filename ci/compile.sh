@@ -1,15 +1,32 @@
 #!/bin/bash
 set -ex
 
-# use clang for compilation to fix OpenMP error on macos
+# compile function
+compile()
+{
+    cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
+    cmake --build . --config Release
+    cmake --build . --config Debug
+}
+# run programms function
+run_programs()
+{
+    ./examples/console-utils-test
+    ./examples/prime-sum-benchmark
+    ./examples/time-operations
+}
+
+# test with gcc
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
+compile
+run_programs
+
+# cleanup cmake
+rm -rf build
+
+# test with clang
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
-
-cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
-cmake --build . --config Release
-cmake --build . --config Debug
-
-# run the programs
-./examples/console-utils-test
-./examples/prime-sum-benchmark
-./examples/time-operations
+compile
+run_programs
