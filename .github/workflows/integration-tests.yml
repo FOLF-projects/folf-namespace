@@ -20,7 +20,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-20.04, macos-latest, windows-latest]
+        os: [ubuntu-20.04]
+        # disabled windows and macos for now, as OpenMP is not working well there
+        # os: [ubuntu-20.04, macos-latest, windows-latest]
 
     steps:
       - name: checkout repo
