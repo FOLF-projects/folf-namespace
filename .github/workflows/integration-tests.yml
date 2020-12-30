@@ -1,0 +1,32 @@
+name: integration-tests
+
+on: [push, pull_request]
+
+env:
+  # Make Homebrew installation a little quicker
+  HOMEBREW_NO_ANALYTICS: "ON"
+  HOMEBREW_NO_AUTO_UPDATE: "ON"
+  HOMEBREW_NO_BOTTLE_SOURCE_FALLBACK: "ON"
+  HOMEBREW_NO_GITHUB_API: "ON"
+  HOMEBREW_NO_INSTALL_CLEANUP: "ON"
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, macos-latest, windows-latest]
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v1
+      
+      - name: build windows
+        if: matrix.os == 'windows'
+        run: |
+          ci\compile.bat
+
+      - name: build linux
+        if: matrix.os == 'ubuntu-20.04' || matrix.os == 'macos-latest'
+        run: |
+          bash ci/compile.sh
