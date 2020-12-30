@@ -34,7 +34,7 @@ void folf::numberOperations::primeSum(const unsigned long long *maxNum, unsigned
      * if it fails to compile, make sure to set -fopenmp and use a modern compiler shipped with OpenMP
      * NOTE: enabling of OpenMP is handled by CMake, it checks for it's availability too
      */
-    omp_set_num_threads(9);
+    omp_set_num_threads(4);
     #pragma omp parallel for reduction( + : primeSumL )
     for (unsigned long long i = 1; i < *maxNum; i += 2) 
     {

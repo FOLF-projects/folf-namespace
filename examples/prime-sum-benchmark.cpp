@@ -36,5 +36,14 @@ int main()
     }
 
     std::cout << "sum: " << primeSum << std::endl;
+
+    // check, if the value is right
+    if (primeSum == 3203324994357)
+        std::cout << "That value is correct!\n";
+    else
+    {
+        std::cout << "That value is wrong! Oh no!\n";
+        return 1;
+    }
     return 0;
 }

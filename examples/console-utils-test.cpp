@@ -9,7 +9,7 @@
 
 void timer(bool *finished) 
 {
-    folf::timeOperations::sleepFor(10000);
+    folf::timeOperations::sleepFor(15);
     *finished = true;
 }
 int main() 
