@@ -6,7 +6,6 @@
 // ===========================================================
 #include "folf.hpp"
 #include <iostream>
-#include <omp.h>
 
 void folf::legacy::TimeBenchLegacy::setStartTime() 
 {
@@ -45,15 +44,9 @@ void folf::legacy::TimeBenchLegacy::printTimeSeconds() const
 unsigned long long folf::legacy::primeSumLegacy(const unsigned long long *maxNum) 
 {
     unsigned long long primeSum = 2;
-    /*
-     * OpenMP implementation for multithreading the for loop, completely optional
-     * this defines the number of maximal threads, 999 should work fine
-     * (threads can be more than actual CPU cores, because most loops are empty)
-     * if it fails to compile, make sure to set -fopenmp and use a modern compiler shipped with OpenMP
-     * NOTE: The enabling of OpenMP is handled by CMake, it automatically checks its availability too
-     */
-    omp_set_num_threads(9);
-    #pragma omp parallel for reduction( + : primeSum )
+
+
+
     for (unsigned long long i = 1; i < *maxNum; i += 2)
     {
         // testPrime returns true, if the given number is a Prime
