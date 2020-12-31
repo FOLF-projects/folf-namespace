@@ -26,10 +26,10 @@ bool folf::numberOperations::checkPrime(const unsigned long long *num)
 void folf::numberOperations::primeSum(const unsigned long long *maxNum, unsigned long long *primeSum)
 {
     unsigned long long primeSumL = 2;
-    for (unsigned long long i = 1; i < *maxNum; i += 2) 
+    for (unsigned long long i = 1; i < *maxNum; i += 2)
     {
         // testPrime returns true, if the given number is a Prime
-        if (folf::numberOperations::checkPrime(&i)) 
+        if (folf::numberOperations::checkPrime(&i))
         {
             primeSumL = primeSumL + i;
         }

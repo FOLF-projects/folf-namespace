@@ -16,21 +16,22 @@ void primeFunction(unsigned long long *maxNumber, unsigned long long *primeSum, 
 }
 int main()
 {
-    std::cout << "running version " << FOLF_VERSION_COMPLETE << " of FOLF" << std::endl;
     unsigned long long maxNumber = 10000000;
     std::cout << "prime number calculator" << std::endl;
+    std::cout << "running version " << FOLF_VERSION_COMPLETE << " of FOLF" << std::endl;
     std::cout << "calculates every prime number up to " << maxNumber << std::endl;
-    std::cout << "starting to calculate..." << std::endl;
 
     bool finished = false;
     unsigned long long primeSum = 0;
 
-    std::thread t1(folf::consoleOperations::simpleLoadingAnimation, "calculating ", &finished);
-    std::thread t2(primeFunction, &maxNumber, &primeSum, &finished);
-
     {
+        // start the timer
         folf::timeOperations::timeBench tb;
 
+        std::thread t1(folf::consoleOperations::simpleLoadingAnimation, "calculating ", &finished);
+        std::thread t2(primeFunction, &maxNumber, &primeSum, &finished);
+        
+        // synchronize threads again
         t1.join();
         t2.join();
     }
@@ -39,10 +40,10 @@ int main()
 
     // check, if the value is right
     if (primeSum == 3203324994357)
-        std::cout << "That value is correct!\n";
+        std::cout << "This value is correct!\n";
     else
     {
-        std::cout << "That value is wrong! Oh no!\n";
+        std::cout << "This value is wrong! Oh no!\n";
         return 1;
     }
     return 0;
