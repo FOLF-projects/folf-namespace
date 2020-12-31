@@ -28,6 +28,7 @@ int main()
         // start the timer
         folf::timeOperations::timeBench tb;
 
+        // start threads
         std::thread t1(folf::consoleOperations::simpleLoadingAnimation, "calculating ", &finished);
         std::thread t2(primeFunction, &maxNumber, &primeSum, &finished);
         
