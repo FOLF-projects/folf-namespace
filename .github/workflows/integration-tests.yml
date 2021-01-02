@@ -2,9 +2,9 @@ name: integration-tests
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 env:
   # Make Homebrew installation a little quicker
@@ -20,9 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-20.04]
-        # disabled windows and macos for now, as OpenMP is not working well
-        # os: [ubuntu-20.04, macos-latest, windows-latest]
+        os: [ubuntu-20.04, macos-latest, windows-latest]
 
     steps:
       - name: checkout repo
@@ -33,7 +31,7 @@ jobs:
         run: |
           ci\compile.bat
 
-      - name: build linux
+      - name: build linux/macos
         if: matrix.os == 'ubuntu-20.04' || matrix.os == 'macos-latest'
         run: |
           bash ci/compile.sh

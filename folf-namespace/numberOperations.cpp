@@ -5,7 +5,6 @@
 // https://github.com/FOLF-projects/folf-namespace
 // ===========================================================
 #include "folf.hpp"
-#include <omp.h>
 #include <cmath>
 #include <random>
 #include <chrono>
@@ -27,19 +26,11 @@ bool folf::numberOperations::checkPrime(const unsigned long long *num)
 void folf::numberOperations::primeSum(const unsigned long long *maxNum, unsigned long long *primeSum)
 {
     unsigned long long primeSumL = 2;
-    /*
-     * OpenMP implementation for multithreading the for loop, completely optional
-     * this defines the number of maximal threads, 999 should work fine
-     * (threads can be more than actual CPU cores, because most loops are empty)
-     * if it fails to compile, make sure to set -fopenmp and use a modern compiler shipped with OpenMP
-     * NOTE: enabling of OpenMP is handled by CMake, it checks for it's availability too
-     */
-    omp_set_num_threads(4);
-    #pragma omp parallel for reduction( + : primeSumL )
-    for (unsigned long long i = 1; i < *maxNum; i += 2) 
+
+    for (unsigned long long i = 1; i < *maxNum; i += 2)
     {
         // testPrime returns true, if the given number is a Prime
-        if (folf::numberOperations::checkPrime(&i)) 
+        if (folf::numberOperations::checkPrime(&i))
         {
             primeSumL = primeSumL + i;
         }
