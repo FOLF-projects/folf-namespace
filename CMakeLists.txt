@@ -6,6 +6,9 @@ project(folf-namespace
         HOMEPAGE_URL "https://github.com/FOLF-projects/folf-namespace"
         LANGUAGES CXX)
 
+option(FOLF_BUILD_EXAMPLES "Set to ON to build examples" ON)
+option(FOLF_ENABLE_INSTALL "Generate the install target" ON)
+
 # use C++20 standard if none was given
 if (NOT CMAKE_CXX_STANDARD)
     set(CMAKE_CXX_STANDARD 20)
@@ -63,11 +66,15 @@ foreach(target folf-namespace)
 endforeach(target test)
 
 # add the example programs
-add_subdirectory(examples)
+if (FOLF_BUILD_EXAMPLES)
+        add_subdirectory(examples)
+endif()
 
 # enable installing of the library and it's parts
-install(TARGETS folf-namespace
-        RUNTIME DESTINATION bin
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib
-        PUBLIC_HEADER DESTINATION include/folf-namespace)
+if (FOLF_ENABLE_INSTALL)
+        install(TARGETS folf-namespace
+                RUNTIME DESTINATION bin
+                LIBRARY DESTINATION lib
+                ARCHIVE DESTINATION lib
+                PUBLIC_HEADER DESTINATION include/folf-namespace)
+endif()
