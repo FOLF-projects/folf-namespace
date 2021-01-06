@@ -20,7 +20,6 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 # create a variable for FOLF's sources
 set(folf-source
         folf-namespace/consoleOperations.cpp
-        folf-namespace/legacy.cpp
         folf-namespace/numberOperations.cpp
         folf-namespace/timeOperations.cpp
         folf-namespace/algorithms.cpp)
