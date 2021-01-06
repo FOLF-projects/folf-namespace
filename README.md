@@ -1,12 +1,12 @@
 # FOLF-namespace - a C++ library written by a fox and a wolf
 
 ## Overview
-1. What is FOLF-namespace?
-2. How do I use FOLF-namespace?
-3. Whose project is FOLF?
-4. Contact
-5. Am I allowed to use it?
-6. Copyright and license
+1. [What is FOLF-namespace?](#1-what-is-folf-namespace)
+2. [How do I use FOLF-namespace?](#2-how-do-i-use-folf-namespace)
+3. [Whose project is FOLF?](#3-whose-project-is-folf)
+4. [Contact](#4-contact)
+5. [Am I allowed to use it?](#5-am-i-allowed-to-use-it)
+6. [Copyright and license](#6-copyright-and-license)
 
 ***
 
