@@ -8,6 +8,8 @@
 5. Am I allowed to use it?
 6. Copyright and license
 
+***
+
 ## 1. What is FOLF-namespace?
 FOLF-namespace is part of FOLF. It is a library for C++ and includes algorithms for benchmarks, math and a lot more. Just check out the wiki pages! :)
 
