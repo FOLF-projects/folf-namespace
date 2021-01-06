@@ -80,32 +80,4 @@ namespace folf
         // The Euclidean algorithm detects the greatest common divisor of two numbers.
         unsigned short int euclidean_algorithm(unsigned short int, unsigned short int);
     }
-    // includes already rewritten functions and classes
-    namespace legacy 
-    {
-        // calculates all numbers to a given number and throws them out - already reworked
-        class TimeBenchLegacy 
-        {
-        private:
-            // stores the timestamps
-            long double startTime{}, stopTime{};
-        public:
-            TimeBenchLegacy() = default;
-            ~TimeBenchLegacy() = default;
-            // set start time
-            void setStartTime();
-            // set stop time
-            void setStopTime();
-            // calculate taken time
-            [[nodiscard]] long double getMicroseconds() const;
-            [[nodiscard]] long double getMilliseconds() const;
-            [[nodiscard]] long double getSeconds() const;
-            // returns taken time
-            void printTimeMicroseconds() const;
-            void printTimeMilliseconds() const;
-            void printTimeSeconds() const;
-        };
-        // Calculates all Primes to a given number together and returns the result - already reworked
-        unsigned long long primeSumLegacy(const unsigned long long *maxNum);
-    }
 }
