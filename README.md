@@ -1,19 +1,28 @@
-# FOLF - a C++ library written by a fox and a wolf
-FOLF is a namespace used by some perople to develop and test new algorithms. It features many benchmarking features and some small algorithms to make our life easier. Everything works on Windows and Linux. Other OSs might work as well, but we can't guarantee this or offer support for those OSs. 
+# FOLF-namespace - a C++ library written by a fox and a wolf
 
-# Why?
-Because two friends want to do some C++ together.
+## Overview
+1. What is FOLF-namespace?
+2. How do I use FOLF-namespace?
+3. Whose project is FOLF?
+4. Contact
+5. Am I allowed to use it?
+6. Copyright and license
 
-# Use with CMake (recommended!)
+## 1. What is FOLF-namespace?
+FOLF-namespace is part of FOLF. It is a library for C++ and includes algorithms for benchmarks, math and a lot more. Just check out the wiki pages! :)
+
+
+## 2. How do I use FOLF-namespace?
+We highly recommend using CMake. The most recent version of FOLF-namespace will be downloaded and added automatically.
+
+### Using CMake:
 ```cmake
 # disable not required things
 set(FOLF_BUILD_EXAMPLES false)
 set(FOLF_ENABLE_INSTALL false)
-
 # enable cmake function
 include(FetchContent)
 set(FETCHCONTENT_UPDATES_DISCONNECTED TRUE)
-
 # download folf-namespace library
 FetchContent_Declare(folf_namespace
   GIT_REPOSITORY https://github.com/FOLF-projects/folf-namespace.git
@@ -30,9 +39,14 @@ After that you just need to link the library to your target
 add_executable(TARGET path/to/source)
 target_link_libraries(TARGET PRIVATE folf-namespace)
 ```
-Then you can just include it inside your code
+Add this to your code file's header:
 ```c++
-// your.cpp
+// includes folf's features
+#include <folf-namespace/folf.hpp>
+```
+
+If you want to check if everything works as expected:
+```c++
 #include <iostream>
 // includes folf's features
 #include <folf-namespace/folf.hpp>
@@ -48,13 +62,22 @@ int main()
 }
 ```
 
-# Use without CMake (not recommended!)
-Copy the contents of /folf-namespace/ into your projects or create a git sub module. Just don't forget to make sure to not run out of date to ensure of using always the latest version! After copying you just need to include all files into your source or compile it with your prefered build system, like Visual Studio Solutions (even though cmake can generate visual studio solutions for you). Now you should be ready to use FOLF!
+### Without CMake:
+Copy the contents of /folf-namespace/ into your projects or create a git sub module. Just don't forget to make sure to not run an old version! After copying, you just need to include all files into your source or compile it with your prefered build system, like Visual Studio Solutions (even though CMake can generate Visual Studio Solutions for you). Now you should be ready to use FOLF-namespace!
 
-NOTE: Using folf without CMake is not recommended and we don't accept pull-requests for adding other build systems. Thank you!
 
-# Am I allowed to use it?
-According to its license (MIT), everyone can use it under the terms of the license.
+## 3. Whose project is FOLF?
+The founders of FOLF are Damon Leven and AdmiralEmser. We are two beginning developers. Our primary aim is to code - or how Damon would say: "[...] two friends want to do some C++ together."
 
-# License
-FOLF is licensed under [MIT](https://github.com/FOLF-projects/folf-namespace/blob/master/LICENSE).
+
+## 4. Contact
+You can contact us via [Discord](https://discord.gg/beKQ7j9gRp).
+
+
+## 5. Am I allowed to use it?
+Short version: Yes. But mind the license (see below)!
+
+
+## 6. Copyright and license
+© by FOLF-projects founded by Damon Leven and AdmiralEmser.
+This project is licensed as MIT. For further information, check out the [license file](https://github.com/FOLF-projects/folf-namespace/blob/main/LICENSE) in this repository.
