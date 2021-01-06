@@ -21,6 +21,7 @@ This library supports the following systems:
 - Linux (gcc, clang, full testing)
 - MacOS (gcc, clang, full testing)
 - Windows (MSVC only, only limited testing)
+  NOTE: Visual studio clang might not work at all
 Only 64 bit compilation is tested and supported. Also the default C++ standard version is C++20. Using a lower standard is possible, but not tested nor supported.
 
 ## 3. How do I use FOLF-namespace?
