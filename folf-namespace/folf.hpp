@@ -19,7 +19,8 @@ namespace folf
         bool isChance(int);
         // returns a random number up to x
         unsigned long long randomNum(int);
-        // creates a vector of two numbers
+        // creates a vector of two numbers by deviding the second from the first
+        // createVector(X,Y)
         signed int createVector(const unsigned int*, const unsigned int*)
     }
     // time conversion and calculation functions
