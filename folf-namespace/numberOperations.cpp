@@ -47,3 +47,7 @@ bool folf::numberOperations::isChance(int chanceDenominator)
 {
     return folf::numberOperations::randomNum(chanceDenominator) == 0;
 }
+signed int folf::numberOperations::createVector(const unsigned int *from, const unsigned int *to)
+{
+    return *to - *from;
+}
