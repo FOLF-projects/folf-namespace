@@ -1,32 +1,47 @@
 #!/bin/bash
 set -ex
 
-# compile function
-compile()
+CLEANUP()
 {
-    cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
-    cmake --build . --config Release
-    cmake --build . --config Debug
+    git reset --hard
+    git clean -fdx
 }
-# run programms function
-run_programs()
+RUN_PROGRAMMS()
 {
+    # a list of all programs / targets compiled by this project
     ./examples/console-utils-test
     ./examples/prime-sum-benchmark
     ./examples/time-operations
 }
 
-# test with gcc
+# compile gcc release
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
-compile
-run_programs
+CLEANUP
+cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
+cmake --build . --config Release
+RUN_PROGRAMMS
 
-# cleanup cmake
-rm -rf build
+# compile gcc debug
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
+CLEANUP
+cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
+cmake --build . --config Debug
+RUN_PROGRAMMS
 
-# test with clang
+# compile clang release
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
-compile
-run_programs
+CLEANUP
+cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
+cmake --build . --config Release
+RUN_PROGRAMMS
+
+# compile clang debug
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+CLEANUP
+cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
+cmake --build . --config Debug
+RUN_PROGRAMMS
