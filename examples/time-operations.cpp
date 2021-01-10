@@ -4,7 +4,7 @@
 // see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
 // ===========================================================
-#include <folf/timeTool.hpp>
+#include <folf/timeTools.hpp>
 #include <iostream>
 
 int main() 

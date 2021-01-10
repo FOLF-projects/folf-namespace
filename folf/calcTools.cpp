@@ -5,7 +5,7 @@
 // see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
 // =============================================================================================
-#include "numTool.hpp"
+#include "calcTools.hpp"
 #include <cmath>
 #include <random>
 #include <chrono>

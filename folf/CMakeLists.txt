@@ -1,8 +1,8 @@
 # create a variable for FOLF's sources
 set(folf-source
-        conTool.cpp
-        numTool.cpp
-        timeTool.cpp
+        conTools.cpp
+        calcTools.cpp
+        timeTools.cpp
         algorithms.cpp)
 
 # prepare information header
@@ -18,7 +18,7 @@ target_link_libraries(folf-namespace PRIVATE Threads::Threads)
 target_include_directories(folf-namespace INTERFACE ${PROJECT_SOURCE_DIR} ${PROJECT_BINARY_DIR})
 set_target_properties(folf-namespace PROPERTIES
         PUBLIC_HEADER "folf/algorithms.hpp;
-                       folf/folf-info.hpp;
-                       folf/conTool.hpp;
-                       folf/numTool.hpp;
-                       folf/timeTool.hpp")
+                       folf/info.hpp;
+                       folf/conTools.hpp;
+                       folf/numTools.hpp;
+                       folf/timeTools.hpp")

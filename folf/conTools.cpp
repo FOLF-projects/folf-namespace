@@ -5,8 +5,8 @@
 // see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
 // =============================================================================================
-#include "conTool.hpp"
-#include "timeTool.hpp"
+#include "conTools.hpp"
+#include "timeTools.hpp"
 #include <iostream>
 
 // two versions are needed due to different sleep() functions on windows and linux
