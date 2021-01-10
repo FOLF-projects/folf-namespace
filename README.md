@@ -1,6 +1,9 @@
 # FOLF-namespace - a C++ library written by a fox and a wolf
 
-![integration-tests](https://github.com/FOLF-projects/folf-namespace/workflows/integration-tests/badge.svg)
+![linux-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/linux-integration-testing/badge.svg)
+![windows-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/windows-integration-testing/badge.svg)
+![macos-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/macos-integration-testing/badge.svg)
+![CodeQL](https://github.com/FOLF-projects/folf-namespace/workflows/CodeQL/badge.svg)
 
 ## Overview
 1. [What is FOLF-namespace?](#1-what-is-folf-namespace)
