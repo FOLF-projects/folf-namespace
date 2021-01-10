@@ -29,9 +29,9 @@ jobs:
       - name: build windows
         if: matrix.os == 'windows-latest'
         run: |
-          ci\compile.bat
+          .ci\compile.bat
 
       - name: build linux/macos
         if: matrix.os == 'ubuntu-20.04' || matrix.os == 'macos-latest'
         run: |
-          bash ci/compile.sh
+          bash .ci/compile.sh
