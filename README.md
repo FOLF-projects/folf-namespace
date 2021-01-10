@@ -21,7 +21,9 @@ This library supports the following systems:
 - Linux (gcc, clang, full testing)
 - MacOS (gcc, clang, full testing)
 - Windows (MSVC only, only limited testing)
+
   NOTE: Visual studio clang might not work at all
+
 Only 64 bit compilation is tested and supported. Also the default C++ standard version is C++20. Using a lower standard is possible, but not tested nor supported.
 
 ## 3. How do I use FOLF-namespace?
@@ -29,9 +31,9 @@ We highly recommend using CMake. The most recent version of FOLF-namespace will 
 
 ### Using CMake:
 ```cmake
-# disable not required things
-set(FOLF_BUILD_EXAMPLES false)
-set(FOLF_ENABLE_INSTALL false)
+# disable not required FOLF targets
+set(FOLF_BUILD_EXAMPLES OFF CACHE BOOL "don't build examples" FORCE)
+set(FOLF_ENABLE_INSTALL OFF CACHE BOOL "disable install" FORCE)
 # enable cmake function
 include(FetchContent)
 set(FETCHCONTENT_UPDATES_DISCONNECTED TRUE)
@@ -53,17 +55,24 @@ target_link_libraries(TARGET PRIVATE folf-namespace)
 ```
 Add this to your code file's header:
 ```c++
-// includes folf's features
-#include <folf-namespace/folf.hpp>
+// all headers of FOLF
+#include <folf/info.hpp>
+#include <folf/algorithms.hpp>
+#include <folf/conTools.hpp>
+#include <folf/calcTools.hpp>
+#include <folf/timeTools.hpp>
 ```
 
 If you want to check if everything works as expected:
 ```c++
 #include <iostream>
 // includes folf's features
-#include <folf-namespace/folf.hpp>
+#include <folf/algorithms.hpp>
+#include <folf/conTools.hpp>
+#include <folf/calcTools.hpp>
+#include <folf/timeTools.hpp>
 // includes folf's version and repo info
-#include <folf-namespace/folf-info.hpp>
+#include <folf/info.hpp>
 
 int main()
 {
@@ -75,7 +84,7 @@ int main()
 ```
 
 ### Without CMake:
-Copy the contents of /folf-namespace/ into your projects or create a git sub module. Just don't forget to make sure to not run an old version! After copying, you just need to include all files into your source or compile it with your prefered build system, like Visual Studio Solutions (even though CMake can generate Visual Studio Solutions for you). Now you should be ready to use FOLF-namespace!
+Copy the contents of /folf-namespace/ into your projects or create a git sub module. Just don't forget to make sure to not run an old version! After copying, you just need to include all files into your source or compile it with your preferred build system, like Visual Studio Solutions (even though CMake can generate Visual Studio Solutions for you). Now you should be ready to use FOLF-namespace!
 
 
 ## 4. Whose project is FOLF?
