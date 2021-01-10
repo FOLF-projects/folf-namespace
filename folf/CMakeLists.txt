@@ -7,9 +7,11 @@ set(folf-source
 
 # prepare information header
 configure_file(folf-info.hpp.in folf-info.hpp)
+
 # enable threads library
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
+
 # create a compile target for FOLF
 add_library(folf-namespace ${folf-source})
 target_link_libraries(folf-namespace PRIVATE Threads::Threads)
