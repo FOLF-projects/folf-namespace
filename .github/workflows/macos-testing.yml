@@ -1,4 +1,4 @@
-name: integration-tests
+name: macos-integration-testing
 
 on:
   push:
@@ -16,22 +16,14 @@ env:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-latest
     strategy:
       fail-fast: false
-      matrix:
-        os: [ubuntu-20.04, macos-latest, windows-latest]
 
     steps:
       - name: checkout repo
         uses: actions/checkout@v1
-      
-      - name: build windows
-        if: matrix.os == 'windows-latest'
-        run: |
-          .ci\compile.bat
-
-      - name: build linux/macos
-        if: matrix.os == 'ubuntu-20.04' || matrix.os == 'macos-latest'
+      - name: compile
         run: |
           bash .ci/compile.sh
+          
