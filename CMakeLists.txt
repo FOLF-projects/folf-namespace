@@ -24,7 +24,7 @@ if (FOLF_BUILD_EXAMPLES)
 endif()
 
 # enable warnings and set compile features
-foreach(target folf-namespace)
+foreach(target folf-namespace ${EXAMPLE_PROGRAM_TARGETS})
         # Force Microsoft Visual Studio to decode sources files in UTF-8
         if (MSVC)
                 target_compile_options(${target} PUBLIC "/utf-8")
