@@ -1,15 +1,16 @@
-// ===========================================================
-// includes all features related to number operations
+// =============================================================================================
+// FOLF - A C++ library developed by a fox and a wolf for testing and making development easier!
+// numTool.cpp - Includes various number related functions of FOLF
 // developed and distributed by FOLF-projects on GitHub
 // see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
-// ===========================================================
-#include "folf.hpp"
+// =============================================================================================
+#include "numTool.hpp"
 #include <cmath>
 #include <random>
 #include <chrono>
 
-bool folf::numberOperations::checkPrime(const unsigned long long *num)
+bool folf::numTool::checkPrime(const unsigned long long *num)
 {
     // taking the square root to speed up the calculation and place the result into another variable to save more time (seems like c++ calculates the sqrt on every loop otherwise)
     double root = sqrt((double)*num);
@@ -23,31 +24,31 @@ bool folf::numberOperations::checkPrime(const unsigned long long *num)
     }
     return true;
 }
-void folf::numberOperations::primeSum(const unsigned long long *maxNum, unsigned long long *primeSum)
+void folf::numTool::primeSum(const unsigned long long *maxNum, unsigned long long *primeSum)
 {
     unsigned long long primeSumL = 2;
 
     for (unsigned long long i = 1; i < *maxNum; i += 2)
     {
         // testPrime returns true, if the given number is a Prime
-        if (folf::numberOperations::checkPrime(&i))
+        if (folf::numTool::checkPrime(&i))
         {
             primeSumL = primeSumL + i;
         }
     }
     *primeSum = primeSumL;
 }
-unsigned long long folf::numberOperations::randomNum(int maxNum) 
+unsigned long long folf::numTool::randomNum(int maxNum) 
 {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::mt19937_64 generator(seed);
     return generator() % maxNum; // lowers the number to the specified range
 }
-bool folf::numberOperations::isChance(int chanceDenominator) 
+bool folf::numTool::isChance(int chanceDenominator) 
 {
-    return folf::numberOperations::randomNum(chanceDenominator) == 0;
+    return folf::numTool::randomNum(chanceDenominator) == 0;
 }
-signed int folf::numberOperations::createVector(const unsigned int *from, const unsigned int *to)
+signed int folf::numTool::createVector(const unsigned int *from, const unsigned int *to)
 {
     return *to - *from;
 }

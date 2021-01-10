@@ -1,20 +1,19 @@
 // =============================================================================================
 // FOLF - A C++ library developed by a fox and a wolf for testing and making development easier!
-// algorithms.cpp - Includes various not categorized functions of FOLF
+// conTool.hpp - Includes various console oriented functions of FOLF
 // developed and distributed by FOLF-projects on GitHub
 // see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
 // =============================================================================================
-#include "algorithms.hpp"
+#pragma once
 
-unsigned short int folf::algorithms::euclidean_algorithm(unsigned short int num1, unsigned short int num2)
+// includes various functions for benchmarking and common tasks
+namespace folf
 {
-    unsigned int temp;
-    while (num2 != 0)
+    // Includes various console oriented functions
+    namespace conTool
     {
-        temp = num1 % num2;
-        num1 = num2;
-        num2 = temp;
+        // creates a simple loading animation
+        void simpleLoadingAnimation(const char *, const bool *);
     }
-    return num1;
 }
