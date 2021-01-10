@@ -18,7 +18,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED on)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 # include subprojects
-add_subdirectory(folf-namespace)
+add_subdirectory(folf)
 if (FOLF_BUILD_EXAMPLES)
         add_subdirectory(examples)
 endif()

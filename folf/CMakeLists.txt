@@ -15,4 +15,4 @@ add_library(folf-namespace ${folf-source})
 target_link_libraries(folf-namespace PRIVATE Threads::Threads)
 target_include_directories(folf-namespace INTERFACE ${PROJECT_SOURCE_DIR} ${PROJECT_BINARY_DIR})
 set_target_properties(folf-namespace PROPERTIES
-        PUBLIC_HEADER "folf-namespace/folf.hpp;folf-namespace/folf-info.hpp")
+        PUBLIC_HEADER "folf/folf.hpp;folf/folf-info.hpp")

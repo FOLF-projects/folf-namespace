@@ -4,7 +4,7 @@
 // see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
 // ===========================================================
-#include <folf-namespace/folf.hpp>
+#include <folf/folf.hpp>
 #include <thread>
 
 void timer(bool *finished) 
