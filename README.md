@@ -5,11 +5,11 @@
 ## Overview
 1. [What is FOLF-namespace?](#1-what-is-folf-namespace)
 2. [What systems are supported?](#2-what-systems-are-supported)
-3. [How do I use FOLF-namespace?](#2-how-do-i-use-folf-namespace)
-4. [Whose project is FOLF?](#3-whose-project-is-folf)
-5. [Contact](#4-contact)
-6. [Am I allowed to use it?](#5-am-i-allowed-to-use-it)
-7. [Copyright and license](#6-copyright-and-license)
+3. [How do I use FOLF-namespace?](#3-how-do-i-use-folf-namespace)
+4. [Whose project is FOLF?](#4-whose-project-is-folf)
+5. [Contact](#5-contact)
+6. [Am I allowed to use it?](#6-am-i-allowed-to-use-it)
+7. [Copyright and license](#7-copyright-and-license)
 
 ***
 
