@@ -21,7 +21,7 @@ namespace folf
         unsigned long long randomNum(int);
         // creates a vector of two numbers by deviding the second from the first
         // createVector(X,Y)
-        signed int createVector(const unsigned int*, const unsigned int*)
+        signed int createVector(const unsigned int*, const unsigned int*);
     }
     // time conversion and calculation functions
     namespace timeOperations {
