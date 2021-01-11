@@ -17,29 +17,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED on)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-# create a variable for FOLF's sources
-set(folf-source
-        folf-namespace/consoleOperations.cpp
-        folf-namespace/numberOperations.cpp
-        folf-namespace/timeOperations.cpp
-        folf-namespace/algorithms.cpp)
-
-# prepare information header
-configure_file(folf-namespace/folf-info.hpp.in folf-namespace/folf-info.hpp)
-
-# enable threads library
-set(THREADS_PREFER_PTHREAD_FLAG ON)
-find_package(Threads REQUIRED)
-
-# create a compile target for FOLF
-add_library(folf-namespace ${folf-source})
-target_link_libraries(folf-namespace PRIVATE Threads::Threads)
-target_include_directories(folf-namespace INTERFACE ${PROJECT_SOURCE_DIR} ${PROJECT_BINARY_DIR})
-set_target_properties(folf-namespace PROPERTIES
-        PUBLIC_HEADER "folf-namespace/folf.hpp;folf-namespace/folf-info.hpp")
+# include subprojects
+add_subdirectory(folf)
+if (FOLF_BUILD_EXAMPLES)
+        add_subdirectory(examples)
+endif()
 
 # enable warnings and set compile features
-foreach(target folf-namespace)
+foreach(target folf-namespace ${EXAMPLE_PROGRAM_TARGETS})
         # Force Microsoft Visual Studio to decode sources files in UTF-8
         if (MSVC)
                 target_compile_options(${target} PUBLIC "/utf-8")
@@ -62,12 +47,7 @@ foreach(target folf-namespace)
                 target_compile_options(${target} PRIVATE "-Werror")
                 target_compile_options(${target} PRIVATE "-Wno-sign-compare")
         endif()
-endforeach(target test)
-
-# add the example programs
-if (FOLF_BUILD_EXAMPLES)
-        add_subdirectory(examples)
-endif()
+endforeach(target folf-namespace)
 
 # enable installing of the library and it's parts
 if (FOLF_ENABLE_INSTALL)

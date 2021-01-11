@@ -4,14 +4,16 @@
 // see for licence details (MIT) at its official distribution:
 // https://github.com/FOLF-projects/folf-namespace
 // ===========================================================
-#include <folf-namespace/folf.hpp>
-#include <folf-namespace/folf-info.hpp>
+#include <folf/timeTools.hpp>
+#include <folf/info.hpp>
+#include <folf/calcTools.hpp>
+#include <folf/conTools.hpp>
 #include <iostream>
 #include <thread>
 
 void primeFunction(unsigned long long *maxNumber, unsigned long long *primeSum, bool *finished) 
 {
-    folf::numberOperations::primeSum(maxNumber, primeSum);
+    folf::numTool::primeSum(maxNumber, primeSum);
     *finished = true;
 }
 int main()
@@ -26,10 +28,10 @@ int main()
 
     {
         // start the timer
-        folf::timeOperations::timeBench tb;
+        folf::timeTool::timeBench tb;
 
         // start threads
-        std::thread t1(folf::consoleOperations::simpleLoadingAnimation, "calculating ", &finished);
+        std::thread t1(folf::conTool::simpleLoadingAnimation, "calculating ", &finished);
         std::thread t2(primeFunction, &maxNumber, &primeSum, &finished);
         
         // synchronize threads again
