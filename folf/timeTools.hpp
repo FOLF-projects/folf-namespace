@@ -7,30 +7,33 @@
 // =============================================================================================
 #pragma once
 
+// macro functions
+#define daysToHours(days) days * 24
+#define daysToMinutes(days) days * 1440
+#define daysToSeconds(days) days * 86400
+#define hoursToDays(hours) hours / (double)24
+#define hoursToMinutes(hours) hours * 60
+#define hoursToSeconds(hours) hours * 3600
+#define minutesToDays(minutes) minutes / (double)1440
+#define minutesToHours(minutes) minutes / (double)60
+#define minutesToSeconds(minutes) minutes * 60
+#define minutesToMilliseconds(minutes) minutes * 60000
+#define secondsToHours(seconds) seconds / (double)3600
+#define secondsToMinutes(seconds) seconds / (double)60
+#define secondsToMilliseconds(seconds) seconds * 1000
+#define secondsToMicroseconds(seconds) seconds  * 1000000
+#define millisecondsToMinutes(milliseconds) milliseconds / (double)60000
+#define millisecondsToSeconds(milliseconds) milliseconds / (double)1000
+#define millisecondsToMicroseconds(milliseconds) milliseconds * 1000
+#define microsecondsToSeconds(microseconds) microseconds / (double)1000000
+#define microsecondsToMilliseconds(microseconds) microseconds / (double)1000
+
+
 // includes various functions for benchmarking and common tasks
 namespace folf
 {
     // Includes various time related functions
     namespace timeTools {
-        long double daysToHours(const long double *);
-        long double daysToMinutes(const long double *);
-        long double daysToSeconds(const long double *);
-        long double hoursToDays(const long double *);
-        long double hoursToMinutes(const long double *);
-        long double hoursToSeconds(const long double *);
-        long double minutesToDays(const long double *);
-        long double minutesToHours(const long double *);
-        long double minutesToSeconds(const long double *);
-        long double minutesToMilliseconds(const long double *);
-        long double secondsToHours(const long double *);
-        long double secondsToMinutes(const long double *);
-        long double secondsToMilliseconds(const long double *);
-        long double secondsToMicroseconds(const long double *);
-        long double millisecondsToMinutes(const long double *);
-        long double millisecondsToSeconds(const long double *);
-        long double millisecondsToMicroseconds(const long double *);
-        long double microsecondsToSeconds(const long double *);
-        long double microsecondsToMilliseconds(const long double *);
         // sleep for the given number of milliseconds
         void sleepFor(long double);
         // a simple timer with additional features
