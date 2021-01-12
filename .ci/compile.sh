@@ -12,6 +12,7 @@ RUN_PROGRAMMS()
     ./examples/console-utils-test
     ./examples/prime-sum-benchmark
     ./examples/time-operations
+    ./tests/testing-target
 }
 
 # compile gcc release

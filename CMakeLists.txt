@@ -22,6 +22,7 @@ add_subdirectory(folf)
 if (FOLF_BUILD_EXAMPLES)
         add_subdirectory(examples)
 endif()
+add_subdirectory(tests)
 
 # enable warnings and set compile features
 foreach(target folf-namespace ${EXAMPLE_PROGRAM_TARGETS})
