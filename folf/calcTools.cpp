@@ -6,6 +6,7 @@
 // https://github.com/FOLF-projects/folf-namespace
 // =============================================================================================
 #include "calcTools.hpp"
+#include "timeTools.hpp"
 #include <cmath>
 #include <random>
 #include <chrono>
@@ -31,7 +32,7 @@ void folf::calcTools::primeSum(const unsigned long long *maxNum, unsigned long l
     for (unsigned long long i = 1; i < *maxNum; i += 2)
     {
         // testPrime returns true, if the given number is a Prime
-        if (folf::calcTools::checkPrime(&i))
+        if (calcTools::checkPrime(&i))
         {
             primeSumL = primeSumL + i;
         }
@@ -40,13 +41,13 @@ void folf::calcTools::primeSum(const unsigned long long *maxNum, unsigned long l
 }
 unsigned long long folf::calcTools::randomNum(int maxNum) 
 {
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    unsigned seed = timeTools::getTimestamp();
     std::mt19937_64 generator(seed);
     return generator() % maxNum; // lowers the number to the specified range
 }
-bool folf::calcTools::isChance(int chanceDenominator) 
+bool folf::calcTools::isChance(int chanceDenominator)
 {
-    return folf::calcTools::randomNum(chanceDenominator) == 0;
+    return calcTools::randomNum(chanceDenominator) == 0;
 }
 signed int folf::calcTools::createVector(const unsigned int *from, const unsigned int *to)
 {
