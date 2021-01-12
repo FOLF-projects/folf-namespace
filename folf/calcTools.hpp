@@ -11,7 +11,7 @@
 namespace folf
 {
     // Includes various number related functions
-    namespace numTool
+    namespace calcTools
     {
         // checks, if the given number is a Prime
         bool checkPrime(const unsigned long long *num);

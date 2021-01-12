@@ -13,7 +13,7 @@
 
 void primeFunction(unsigned long long *maxNumber, unsigned long long *primeSum, bool *finished) 
 {
-    folf::numTool::primeSum(maxNumber, primeSum);
+    folf::calcTools::primeSum(maxNumber, primeSum);
     *finished = true;
 }
 int main()
@@ -28,10 +28,10 @@ int main()
 
     {
         // start the timer
-        folf::timeTool::timeBench tb;
+        folf::timeTools::timeBench tb;
 
         // start threads
-        std::thread t1(folf::conTool::simpleLoadingAnimation, "calculating ", &finished);
+        std::thread t1(folf::conTools::simpleLoadingAnimation, "calculating ", &finished);
         std::thread t2(primeFunction, &maxNumber, &primeSum, &finished);
         
         // synchronize threads again
