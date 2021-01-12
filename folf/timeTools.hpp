@@ -8,23 +8,23 @@
 #pragma once
 
 // macro functions
-#define daysToHours(days) days * 24
-#define daysToMinutes(days) days * 1440
-#define daysToSeconds(days) days * 86400
+#define daysToHours(days) days * (long long)24
+#define daysToMinutes(days) days * (long long)1440
+#define daysToSeconds(days) days * (long long)86400
 #define hoursToDays(hours) hours / (double)24
-#define hoursToMinutes(hours) hours * 60
-#define hoursToSeconds(hours) hours * 3600
+#define hoursToMinutes(hours) hours * (long long)60
+#define hoursToSeconds(hours) hours * (long long)3600
 #define minutesToDays(minutes) minutes / (double)1440
 #define minutesToHours(minutes) minutes / (double)60
-#define minutesToSeconds(minutes) minutes * 60
-#define minutesToMilliseconds(minutes) minutes * 60000
+#define minutesToSeconds(minutes) minutes * (long long)60
+#define minutesToMilliseconds(minutes) minutes * (long long)60000
 #define secondsToHours(seconds) seconds / (double)3600
 #define secondsToMinutes(seconds) seconds / (double)60
-#define secondsToMilliseconds(seconds) seconds * 1000
-#define secondsToMicroseconds(seconds) seconds  * 1000000
+#define secondsToMilliseconds(seconds) seconds * (long long)1000
+#define secondsToMicroseconds(seconds) seconds  * (long long)1000000
 #define millisecondsToMinutes(milliseconds) milliseconds / (double)60000
 #define millisecondsToSeconds(milliseconds) milliseconds / (double)1000
-#define millisecondsToMicroseconds(milliseconds) milliseconds * 1000
+#define millisecondsToMicroseconds(milliseconds) milliseconds * (long long)1000
 #define microsecondsToSeconds(microseconds) microseconds / (double)1000000
 #define microsecondsToMilliseconds(microseconds) microseconds / (double)1000
 
