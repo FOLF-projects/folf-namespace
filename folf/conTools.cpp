@@ -16,13 +16,13 @@ void folf::conTool::simpleLoadingAnimation(const char *message, const bool *fini
     // draw the animation
     while (!*finished)
     {
-        folf::timeTool::sleepFor(100);
+        folf::timeTools::sleepFor(100);
         std::cout << "\b\\" << std::flush;
-        folf::timeTool::sleepFor(100);
+        folf::timeTools::sleepFor(100);
         std::cout << "\b|" << std::flush;
-        folf::timeTool::sleepFor(100);
+        folf::timeTools::sleepFor(100);
         std::cout << "\b/" << std::flush;
-        folf::timeTool::sleepFor(100);
+        folf::timeTools::sleepFor(100);
         std::cout << "\b-" << std::flush;
     }
     // change the animation to Finished!

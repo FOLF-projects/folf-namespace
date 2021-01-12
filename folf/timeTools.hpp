@@ -11,7 +11,7 @@
 namespace folf
 {
     // Includes various time related functions
-    namespace timeTool {
+    namespace timeTools {
         long double daysToHours(const long double *);
         long double daysToMinutes(const long double *);
         long double daysToSeconds(const long double *);
