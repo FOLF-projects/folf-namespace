@@ -11,7 +11,7 @@
 namespace folf
 {
     // Includes various console oriented functions
-    namespace conTool
+    namespace conTools
     {
         // creates a simple loading animation
         void simpleLoadingAnimation(const char *, const bool *);

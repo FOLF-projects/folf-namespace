@@ -10,19 +10,19 @@
 #include <iostream>
 
 // two versions are needed due to different sleep() functions on windows and linux
-void folf::conTool::simpleLoadingAnimation(const char *message, const bool *finished) 
+void folf::conTools::simpleLoadingAnimation(const char *message, const bool *finished) 
 {
     std::cout << message << std::flush << '-' << std::flush;
     // draw the animation
     while (!*finished)
     {
-        folf::timeTool::sleepFor(100);
+        folf::timeTools::sleepFor(100);
         std::cout << "\b\\" << std::flush;
-        folf::timeTool::sleepFor(100);
+        folf::timeTools::sleepFor(100);
         std::cout << "\b|" << std::flush;
-        folf::timeTool::sleepFor(100);
+        folf::timeTools::sleepFor(100);
         std::cout << "\b/" << std::flush;
-        folf::timeTool::sleepFor(100);
+        folf::timeTools::sleepFor(100);
         std::cout << "\b-" << std::flush;
     }
     // change the animation to Finished!
