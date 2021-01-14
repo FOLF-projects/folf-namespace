@@ -37,6 +37,7 @@ We highly recommend using CMake. The most recent version of FOLF-namespace will 
 # disable not required FOLF targets
 set(FOLF_BUILD_EXAMPLES OFF CACHE BOOL "don't build examples" FORCE)
 set(FOLF_ENABLE_INSTALL OFF CACHE BOOL "disable install" FORCE)
+set(FOLF_ENABLE_TESTING OFF CACHE BOOL "disable testing of folf" FORCE)
 # enable cmake function
 include(FetchContent)
 set(FETCHCONTENT_UPDATES_DISCONNECTED TRUE)
