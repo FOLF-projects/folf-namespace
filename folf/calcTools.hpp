@@ -7,6 +7,10 @@
 // =============================================================================================
 #pragma once
 
+// creates a vector of two numbers by deviding the second from the first
+// createVector(X,Y)
+#define folf_vectorCreate(from,to) to - from
+
 // includes various functions for benchmarking and common tasks
 namespace folf
 {
@@ -21,8 +25,5 @@ namespace folf
         bool isChance(int);
         // returns a random number up to x
         unsigned long long randomNum(int);
-        // creates a vector of two numbers by deviding the second from the first
-        // createVector(X,Y)
-        signed int createVector(const unsigned int*, const unsigned int*);
     }
 }
