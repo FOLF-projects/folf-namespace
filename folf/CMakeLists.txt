@@ -20,5 +20,5 @@ set_target_properties(folf-namespace PROPERTIES
         PUBLIC_HEADER "folf/algorithms.hpp;
                        folf/info.hpp;
                        folf/conTools.hpp;
-                       folf/numTools.hpp;
+                       folf/calcTools.hpp;
                        folf/timeTools.hpp")
