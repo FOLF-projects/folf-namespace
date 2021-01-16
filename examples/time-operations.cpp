@@ -11,7 +11,7 @@ int main()
 {
     const long double days = 9.97879;
     const double newDays = 9.97879;
-    std::cout << "num = " << daysToHours(days) << std::endl;
+    std::cout << "num = " << folf_daysToHours(days) << std::endl;
     std::cout << "NewNum = " << newDays * 24 << std::endl;
 
     return 0;

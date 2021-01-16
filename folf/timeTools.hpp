@@ -8,25 +8,25 @@
 #pragma once
 
 // macro functions
-#define daysToHours(days) days * (long long)24
-#define daysToMinutes(days) days * (long long)1440
-#define daysToSeconds(days) days * (long long)86400
-#define hoursToDays(hours) hours / (double)24
-#define hoursToMinutes(hours) hours * (long long)60
-#define hoursToSeconds(hours) hours * (long long)3600
-#define minutesToDays(minutes) minutes / (double)1440
-#define minutesToHours(minutes) minutes / (double)60
-#define minutesToSeconds(minutes) minutes * (long long)60
-#define minutesToMilliseconds(minutes) minutes * (long long)60000
-#define secondsToHours(seconds) seconds / (double)3600
-#define secondsToMinutes(seconds) seconds / (double)60
-#define secondsToMilliseconds(seconds) seconds * (long long)1000
-#define secondsToMicroseconds(seconds) seconds  * (long long)1000000
-#define millisecondsToMinutes(milliseconds) milliseconds / (double)60000
-#define millisecondsToSeconds(milliseconds) milliseconds / (double)1000
-#define millisecondsToMicroseconds(milliseconds) milliseconds * (long long)1000
-#define microsecondsToSeconds(microseconds) microseconds / (double)1000000
-#define microsecondsToMilliseconds(microseconds) microseconds / (double)1000
+#define folf_daysToHours(days) days * (long long)24
+#define folf_daysToMinutes(days) days * (long long)1440
+#define folf_daysToSeconds(days) days * (long long)86400
+#define folf_hoursToDays(hours) hours / (double)24
+#define folf_hoursToMinutes(hours) hours * (long long)60
+#define folf_hoursToSeconds(hours) hours * (long long)3600
+#define folf_minutesToDays(minutes) minutes / (double)1440
+#define folf_minutesToHours(minutes) minutes / (double)60
+#define folf_minutesToSeconds(minutes) minutes * (long long)60
+#define folf_minutesToMilliseconds(minutes) minutes * (long long)60000
+#define folf_secondsToHours(seconds) seconds / (double)3600
+#define folf_secondsToMinutes(seconds) seconds / (double)60
+#define folf_secondsToMilliseconds(seconds) seconds * (long long)1000
+#define folf_secondsToMicroseconds(seconds) seconds  * (long long)1000000
+#define folf_millisecondsToMinutes(milliseconds) milliseconds / (double)60000
+#define folf_millisecondsToSeconds(milliseconds) milliseconds / (double)1000
+#define folf_millisecondsToMicroseconds(milliseconds) milliseconds * (long long)1000
+#define folf_microsecondsToSeconds(microseconds) microseconds / (double)1000000
+#define folf_microsecondsToMilliseconds(microseconds) microseconds / (double)1000
 
 
 // includes various functions for benchmarking and common tasks

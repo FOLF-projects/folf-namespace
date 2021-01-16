@@ -49,7 +49,3 @@ bool folf::calcTools::isChance(int chanceDenominator)
 {
     return calcTools::randomNum(chanceDenominator) == 0;
 }
-signed int folf::calcTools::createVector(const unsigned int *from, const unsigned int *to)
-{
-    return *to - *from;
-}
