@@ -25,7 +25,7 @@ endif()
 add_subdirectory(tests)
 
 # enable warnings and set compile features
-foreach(target folf-namespace ${EXAMPLE_PROGRAM_TARGETS})
+foreach(target folf-namespace ${EXAMPLE_PROGRAM_TARGETS} folf-namespace)
         # Force Microsoft Visual Studio to decode sources files in UTF-8
         if (MSVC)
                 target_compile_options(${target} PUBLIC "/utf-8")
