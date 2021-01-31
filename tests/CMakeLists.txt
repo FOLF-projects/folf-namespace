@@ -22,7 +22,7 @@ enable_testing()
 # get google test
 include(GoogleTest)
 
-set(testing-source algorithmsTest.cpp calcToolsTest.cpp conToolsTest.cpp timeToolsTest.cpp)
+set(testing-source algorithmsTest.cpp calcToolsTest.cpp timeToolsTest.cpp)
 
 add_executable(testing-target ${testing-source})
 target_link_libraries(testing-target PRIVATE gtest gtest_main folf-namespace)
