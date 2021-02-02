@@ -26,17 +26,16 @@ bool folf::calcTools::checkPrime(const unsigned long long *num)
 }
 void folf::calcTools::primeSum(const unsigned long long *maxNum, unsigned long long *primeSum)
 {
-    unsigned long long primeSumL = 2;
+    *primeSum = 2;
 
     for (unsigned long long i = 1; i < *maxNum; i += 2)
     {
         // testPrime returns true, if the given number is a Prime
         if (calcTools::checkPrime(&i))
         {
-            primeSumL = primeSumL + i;
+            *primeSum = *primeSum + i;
         }
     }
-    *primeSum = primeSumL;
 }
 unsigned long long folf::calcTools::randomNum(int maxNum) 
 {
