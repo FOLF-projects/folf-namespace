@@ -106,6 +106,9 @@ Copy the contents of /folf-namespace/ into your projects or create a git sub mod
 ## 4. Whose project is FOLF?
 The founders of FOLF are Damon Leven and AdmiralEmser. We are two beginning developers. Our primary aim is to code - or how Damon would say: "[...] two friends want to do some C++ together."
 
+## 5. Contact
+You can contact us via [Discord](https://discord.gg/beKQ7j9gRp).
+
 
 ## 6. Am I allowed to use it?
 Short version: Yes. But mind the license (see below)!
