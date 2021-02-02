@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
 project(folf-namespace
-        VERSION 1.0.4
+        VERSION 1.1.0
         DESCRIPTION "FOLF - A C++ library developed by a fox and a wolf for testing and making development easier!"
         HOMEPAGE_URL "https://github.com/FOLF-projects/folf-namespace"
         LANGUAGES CXX)
