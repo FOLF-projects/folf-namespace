@@ -11,41 +11,34 @@
 
 void folf::timeTools::sleepFor(long double milliSeconds)
 {
-    unsigned int startTime = getTimestamp();
-    long double timeTaken = 0;
-    while (timeTaken / 1000 < milliSeconds)
+    unsigned int startTime = folf_getTimestamp;
+    long double timeTaken;
+    do
     {
-        timeTaken = getTimestamp() - startTime;
-    };
+        timeTaken = folf_getTimestamp - startTime;
+    }
+    while (folf_microsecondsToMilliseconds(timeTaken) < milliSeconds);
 }
-folf::timeTools::timer::timer(unsigned short int millisecondsToWait)
+folf::timeTools::timer::timer(unsigned short int millisecondsToWait) : timeToWait{millisecondsToWait}
 {
-    startTime = getTimestamp();
-    timeToWait = millisecondsToWait;
+    startTime = folf_getTimestamp;
 }
 bool folf::timeTools::timer::done() const
 {
-    unsigned int timeTaken = getTimestamp() - startTime;
-    return timeTaken / 1000 > timeToWait;
+    return folf_microsecondsToMilliseconds(folf_getTimestamp - startTime) > timeToWait;
 }
 void folf::timeTools::timer::reset()
 {
-    startTime = getTimestamp();
-}
-unsigned int folf::timeTools::getTimestamp()
-{
-    return std::chrono::time_point_cast<std::chrono::microseconds>(
-            std::chrono::high_resolution_clock::now()).time_since_epoch().count();
+    startTime = folf_getTimestamp;
 }
 folf::timeTools::timeBench::timeBench() 
 {
     std::cout << "Benchmark started!\n";
-    startTime = folf::timeTools::getTimestamp();
+    startTime = folf_getTimestamp;
 }
 folf::timeTools::timeBench::~timeBench() 
 {
-    std::cout << "Benchmark finished!\n";
-    long double takenTime = folf::timeTools::getTimestamp() - startTime;
-    long double seconds = takenTime / 1000000; // calculates the milliseconds of the timestamp into seconds
-    std::cout << "Time: " << seconds << " seconds\n";
+    std::cout << "Benchmark finished!\nTime: "
+              << folf_microsecondsToSeconds((long double)(folf_getTimestamp - startTime))
+              << " seconds\n";
 }

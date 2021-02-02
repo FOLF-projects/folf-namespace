@@ -8,7 +8,7 @@
 #include <folf/conTools.hpp>
 #include <thread>
 
-void timer(bool *finished) 
+void timer(bool *finished)
 {
     folf::timeTools::sleepFor(15);
     *finished = true;

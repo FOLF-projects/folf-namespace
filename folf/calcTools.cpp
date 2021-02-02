@@ -9,15 +9,16 @@
 #include "timeTools.hpp"
 #include <cmath>
 #include <random>
+#include <chrono>
 
 bool folf::calcTools::checkPrime(const unsigned long long *num)
 {
     // taking the square root to speed up the calculation and place the result into another variable to save more time (seems like c++ calculates the sqrt on every loop otherwise)
     double root = sqrt((double)*num);
-    for (int j = 3; j <= root; j += 2)
+    for (int i = 3; i <= root; i += 2)
     {
         // result of 0 means its not a prime = it can be devised through another number except 0 and himself
-        if (*num % j == 0)
+        if (*num % i == 0)
         {
             return false;
         }
@@ -26,8 +27,8 @@ bool folf::calcTools::checkPrime(const unsigned long long *num)
 }
 void folf::calcTools::primeSum(const unsigned long long *maxNum, unsigned long long *primeSum)
 {
+    // start with value 2
     *primeSum = 2;
-
     for (unsigned long long i = 1; i < *maxNum; i += 2)
     {
         // testPrime returns true, if the given number is a Prime
@@ -37,22 +38,16 @@ void folf::calcTools::primeSum(const unsigned long long *maxNum, unsigned long l
         }
     }
 }
-unsigned long long folf::calcTools::randomNum(int maxNum) 
+unsigned long long folf::calcTools::randomNum(unsigned long long maxNum)
 {
     unsigned long long randomNumber;
-    unsigned int seed;
     do
     {
         // make the generator ready
-        seed = timeTools::getTimestamp();
-        std::mt19937_64 generator(seed);
+        std::mt19937_64 generator(folf_getTimestamp);
         randomNumber = generator() % (maxNum +1);
     }
     while (randomNumber == 0);
     
     return randomNumber -1;
-}
-bool folf::calcTools::isChance(int chanceDenominator)
-{
-    return calcTools::randomNum(chanceDenominator) == 0;
 }

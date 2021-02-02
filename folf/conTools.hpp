@@ -11,5 +11,5 @@
 namespace folf::conTools
     {
         // creates a simple loading animation
-        void simpleLoadingAnimation(const char *, const bool *);
+        void simpleLoadingAnimation(const char*, bool*);
     }

@@ -10,7 +10,7 @@
 #include <iostream>
 
 // two versions are needed due to different sleep() functions on windows and linux
-void folf::conTools::simpleLoadingAnimation(const char *message, const bool *finished) 
+void folf::conTools::simpleLoadingAnimation(const char *message, bool *finished)
 {
     std::cout << message << std::flush << '-' << std::flush;
     // draw the animation
