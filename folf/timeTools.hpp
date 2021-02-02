@@ -28,12 +28,13 @@
 #define folf_microsecondsToSeconds(microseconds) microseconds / (double)1000000
 #define folf_microsecondsToMilliseconds(microseconds) microseconds / (double)1000
 // returns a std::chrono::time_point, requires <chrono>
-#define folf_getTimestamp std::chrono::time_point_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now()).time_since_epoch().count()
+#define folf_getTimestamp (unsigned int)std::chrono::time_point_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now()).time_since_epoch().count()
+// sleeps for the given microseconds, requires <chrono> and <thread>
+#define folf_sleepFor(microSeconds) std::this_thread::sleep_for(std::chrono::microseconds(microSeconds))
 
 // includes various functions for benchmarking and common tasks
-namespace folf::timeTools {
-        // sleep for the given number of milliseconds
-        void sleepFor(long double);
+namespace folf::timeTools
+{
         // a simple timer with additional features
         class timer
         {

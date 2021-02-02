@@ -9,16 +9,6 @@
 #include <iostream>
 #include <chrono>
 
-void folf::timeTools::sleepFor(long double milliSeconds)
-{
-    unsigned int startTime = folf_getTimestamp;
-    long double timeTaken;
-    do
-    {
-        timeTaken = folf_getTimestamp - startTime;
-    }
-    while (folf_microsecondsToMilliseconds(timeTaken) < milliSeconds);
-}
 folf::timeTools::timer::timer(unsigned short int millisecondsToWait) : timeToWait{millisecondsToWait}
 {
     startTime = folf_getTimestamp;
