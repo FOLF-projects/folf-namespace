@@ -1,9 +1,22 @@
 # FOLF-namespace - a C++ library written by a fox and a wolf
 
-![linux-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/linux-integration-testing/badge.svg)
-![windows-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/windows-integration-testing/badge.svg)
-![macos-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/macos-integration-testing/badge.svg)
-![CodeQL](https://github.com/FOLF-projects/folf-namespace/workflows/CodeQL/badge.svg)
+[![linux-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/linux-integration-testing/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3Alinux-integration-testing)
+
+[![windows-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/windows-integration-testing/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3Awindows-integration-testing)
+
+[![macos-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/macos-integration-testing/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3Amacos-integration-testing)
+
+[![CodeQL](https://github.com/FOLF-projects/folf-namespace/workflows/CodeQL/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3ACodeQL)
+
+[![Release](https://img.shields.io/github/release/FOLF-Projects/folf-namespace.svg)](https://github.com/FOLF-projects/folf-namespace/releases/latest)
+
+[![License](https://img.shields.io/github/license/FOLF-projects/folf-namespace.svg)](https://github.com/FOLF-projects/folf-namespace/blob/main/LICENSE)
+
+![Maintained: Yes](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+
+![Language: C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+
+[![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/beKQ7j9gRp)
 
 ## Overview
 1. [What is FOLF-namespace?](#1-what-is-folf-namespace)
@@ -24,8 +37,7 @@ This library supports the following systems:
 - Linux (gcc, clang, full testing)
 - MacOS (gcc, clang, full testing)
 - Windows (MSVC only, only limited testing)
-
-  NOTE: Visual studio clang might not work at all
+  - NOTE: Visual studio clang might not work at all
 
 Only 64 bit compilation is tested and supported. Also the default C++ standard version is C++20. Using a lower standard is possible, but not tested nor supported.
 
@@ -93,10 +105,6 @@ Copy the contents of /folf-namespace/ into your projects or create a git sub mod
 
 ## 4. Whose project is FOLF?
 The founders of FOLF are Damon Leven and AdmiralEmser. We are two beginning developers. Our primary aim is to code - or how Damon would say: "[...] two friends want to do some C++ together."
-
-
-## 5. Contact
-You can contact us via [Discord](https://discord.gg/beKQ7j9gRp).
 
 
 ## 6. Am I allowed to use it?
