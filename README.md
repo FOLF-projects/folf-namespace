@@ -1,18 +1,13 @@
 # FOLF-namespace - a C++ library written by a fox and a wolf
 
-[![linux-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/linux-integration-testing/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3Alinux-integration-testing)
-
-[![windows-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/windows-integration-testing/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3Awindows-integration-testing)
-
-[![macos-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/macos-integration-testing/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3Amacos-integration-testing)
-
-[![CodeQL](https://github.com/FOLF-projects/folf-namespace/workflows/CodeQL/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3ACodeQL)
-
 [![Release](https://img.shields.io/github/release/FOLF-Projects/folf-namespace.svg)](https://github.com/FOLF-projects/folf-namespace/releases/latest)
-
 [![License](https://img.shields.io/github/license/FOLF-projects/folf-namespace.svg)](https://github.com/FOLF-projects/folf-namespace/blob/main/LICENSE)
-
 ![Maintained: Yes](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+
+[![linux-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/linux-integration-testing/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3Alinux-integration-testing)
+[![windows-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/windows-integration-testing/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3Awindows-integration-testing)
+[![macos-integration-testing](https://github.com/FOLF-projects/folf-namespace/workflows/macos-integration-testing/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3Amacos-integration-testing)
+[![CodeQL](https://github.com/FOLF-projects/folf-namespace/workflows/CodeQL/badge.svg)](https://github.com/FOLF-projects/folf-namespace/actions?query=workflow%3ACodeQL)
 
 ![Language: C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
