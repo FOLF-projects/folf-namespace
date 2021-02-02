@@ -11,14 +11,14 @@
 #include <iostream>
 #include <thread>
 
-void primeFunction(unsigned long long *maxNumber, unsigned long long *primeSum, bool *finished) 
+void primeFunction(const unsigned long long *maxNumber, unsigned long long *primeSum, bool *finished) 
 {
     folf::calcTools::primeSum(maxNumber, primeSum);
     *finished = true;
 }
 int main()
 {
-    unsigned long long maxNumber = 10000000;
+    const unsigned long long maxNumber = 10000000;
     std::cout << "prime number calculator" << std::endl;
     std::cout << "running version " << FOLF_VERSION_COMPLETE << " of FOLF" << std::endl;
     std::cout << "calculates every prime number up to " << maxNumber << std::endl;
