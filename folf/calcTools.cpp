@@ -41,9 +41,18 @@ void folf::calcTools::primeSum(const unsigned long long *maxNum, unsigned long l
 }
 unsigned long long folf::calcTools::randomNum(int maxNum) 
 {
-    unsigned seed = timeTools::getTimestamp();
-    std::mt19937_64 generator(seed);
-    return generator() % maxNum; // lowers the number to the specified range
+    unsigned long long randomNumber;
+    unsigned int seed;
+    do
+    {
+        // make the generator ready
+        seed = timeTools::getTimestamp();
+        std::mt19937_64 generator(seed);
+        randomNumber = generator() % (maxNum +1);
+    }
+    while (randomNumber == 0);
+    
+    return randomNumber -1;
 }
 bool folf::calcTools::isChance(int chanceDenominator)
 {
