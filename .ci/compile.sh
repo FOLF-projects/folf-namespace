@@ -20,7 +20,7 @@ export CXX=/usr/bin/g++
 CLEANUP
 cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Release
-RUN_PROGRAMMS
+RUN_PROGRAMS
 
 # compile gcc debug
 export CC=/usr/bin/gcc
@@ -28,7 +28,7 @@ export CXX=/usr/bin/g++
 CLEANUP
 cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Debug
-RUN_PROGRAMMS
+RUN_PROGRAMS
 
 # compile clang release
 export CC=/usr/bin/clang
@@ -36,7 +36,7 @@ export CXX=/usr/bin/clang++
 CLEANUP
 cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Release
-RUN_PROGRAMMS
+RUN_PROGRAMS
 
 # compile clang debug
 export CC=/usr/bin/clang
@@ -44,4 +44,4 @@ export CXX=/usr/bin/clang++
 CLEANUP
 cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Debug
-RUN_PROGRAMMS
+RUN_PROGRAMS
