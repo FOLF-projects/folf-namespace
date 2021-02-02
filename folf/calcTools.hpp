@@ -7,15 +7,11 @@
 // =============================================================================================
 #pragma once
 
-// creates a vector of two numbers by deviding the second from the first
-// createVector(X,Y)
+// creates a vector of two numbers by dividing the second var from the first, createVector(X,Y)
 #define folf_vectorCreate(from,to) to - from
 
 // includes various functions for benchmarking and common tasks
-namespace folf
-{
-    // Includes various number related functions
-    namespace calcTools
+namespace folf::calcTools
     {
         // checks, if the given number is a Prime
         bool checkPrime(const unsigned long long *num);
@@ -26,4 +22,3 @@ namespace folf
         // returns a random number up to x
         unsigned long long randomNum(int);
     }
-}

@@ -30,10 +30,7 @@
 
 
 // includes various functions for benchmarking and common tasks
-namespace folf
-{
-    // Includes various time related functions
-    namespace timeTools {
+namespace folf::timeTools {
         // sleep for the given number of milliseconds
         void sleepFor(long double);
         // a simple timer with additional features
@@ -61,4 +58,3 @@ namespace folf
             ~timeBench();
         };
     }
-}

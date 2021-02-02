@@ -9,7 +9,6 @@
 #include "timeTools.hpp"
 #include <cmath>
 #include <random>
-#include <chrono>
 
 bool folf::calcTools::checkPrime(const unsigned long long *num)
 {

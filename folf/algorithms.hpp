@@ -8,12 +8,8 @@
 #pragma once
 
 // includes various functions for benchmarking and common tasks
-namespace folf
-{
-    // Includes various not categorized functions
-    namespace algorithms
+namespace folf::algorithms
     {
         // The Euclidean algorithm detects the greatest common divisor of two numbers.
         unsigned short int euclidean_algorithm(unsigned short int, unsigned short int);
     }
-}
