@@ -7,7 +7,7 @@
 // =============================================================================================
 #pragma once
 
-// macro functions
+// macros
 #define folf_daysToHours(days) days * (long long)24
 #define folf_daysToMinutes(days) days * (long long)1440
 #define folf_daysToSeconds(days) days * (long long)86400
@@ -27,15 +27,14 @@
 #define folf_millisecondsToMicroseconds(milliseconds) milliseconds * (long long)1000
 #define folf_microsecondsToSeconds(microseconds) microseconds / (double)1000000
 #define folf_microsecondsToMilliseconds(microseconds) microseconds / (double)1000
-
+// returns a std::chrono::time_point, requires <chrono>
+#define folf_getTimestamp (unsigned int)std::chrono::time_point_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now()).time_since_epoch().count()
+// sleeps for the given microseconds, requires <chrono> and <thread>
+#define folf_sleepFor(microSeconds) std::this_thread::sleep_for(std::chrono::microseconds(microSeconds))
 
 // includes various functions for benchmarking and common tasks
-namespace folf
+namespace folf::timeTools
 {
-    // Includes various time related functions
-    namespace timeTools {
-        // sleep for the given number of milliseconds
-        void sleepFor(long double);
         // a simple timer with additional features
         class timer
         {
@@ -48,12 +47,10 @@ namespace folf
             [[nodiscard]] bool done() const;
             void reset();
         };
-        // returns the current chrono timestamp
-        unsigned int getTimestamp();
         // writes its lifetime into the console - used for benchmarking
         class timeBench {
         private:
-            long double startTime;
+            long double startTime{};
         public:
             // starts time benchmarking
             timeBench();
@@ -61,4 +58,3 @@ namespace folf
             ~timeBench();
         };
     }
-}

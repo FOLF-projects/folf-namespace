@@ -6,11 +6,12 @@
 // ===========================================================
 #include <folf/timeTools.hpp>
 #include <folf/conTools.hpp>
+#include <chrono>
 #include <thread>
 
-void timer(bool *finished) 
+void timer(bool *finished)
 {
-    folf::timeTools::sleepFor(15);
+    folf_sleepFor(folf_secondsToMicroseconds(1));
     *finished = true;
 }
 int main() 

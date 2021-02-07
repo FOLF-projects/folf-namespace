@@ -8,12 +8,8 @@
 #pragma once
 
 // includes various functions for benchmarking and common tasks
-namespace folf
-{
-    // Includes various console oriented functions
-    namespace conTools
+namespace folf::conTools
     {
         // creates a simple loading animation
-        void simpleLoadingAnimation(const char *, const bool *);
+        void simpleLoadingAnimation(const char*, bool*);
     }
-}

@@ -6,12 +6,11 @@ CLEANUP()
     git reset --hard
     git clean -fdx
 }
-RUN_PROGRAMMS()
+RUN_PROGRAMS()
 {
     # a list of all programs / targets compiled by this project
     ./examples/console-utils-test
     ./examples/prime-sum-benchmark
-    ./examples/time-operations
     ./tests/testing-target
 }
 
@@ -19,30 +18,30 @@ RUN_PROGRAMMS()
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
 CLEANUP
-cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
+cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Release
-RUN_PROGRAMMS
+RUN_PROGRAMS
 
 # compile gcc debug
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
 CLEANUP
-cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
+cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Debug
-RUN_PROGRAMMS
+RUN_PROGRAMS
 
 # compile clang release
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 CLEANUP
-cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
+cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Release
-RUN_PROGRAMMS
+RUN_PROGRAMS
 
 # compile clang debug
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 CLEANUP
-cmake -DCMAKE_INSTALL_PREFIX=`pwd`/inst .
+cmake -DCMAKE_INSTALL_PREFIX=./inst .
 cmake --build . --config Debug
-RUN_PROGRAMMS
+RUN_PROGRAMS
