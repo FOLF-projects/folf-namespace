@@ -42,79 +42,79 @@ void folf::timeTools::sleep(unsigned int microSeconds)
     std::this_thread::sleep_for(std::chrono::microseconds(microSeconds));
 }
 
-inline long long folf::timeTools::daysToHours(unsigned int days)
+long long folf::timeTools::daysToHours(unsigned int days)
 {
     return days * (long long)24;
 }
-inline long long folf::timeTools::daysToMinutes(unsigned int days)
+long long folf::timeTools::daysToMinutes(unsigned int days)
 {
     return days * (long long)1440;
 }
-inline long long folf::timeTools::daysToSeconds(unsigned int days)
+long long folf::timeTools::daysToSeconds(unsigned int days)
 {
     return days * (long long)86400;
 }
-inline double folf::timeTools::hoursToDays(unsigned int hours)
+double folf::timeTools::hoursToDays(unsigned int hours)
 {
     return hours / (double)24;
 }
-inline long long folf::timeTools::hoursToMinutes(unsigned int hours)
+long long folf::timeTools::hoursToMinutes(unsigned int hours)
 {
     return hours * (long long)60;
 }
-inline long long folf::timeTools::hoursToSeconds(unsigned hours)
+long long folf::timeTools::hoursToSeconds(unsigned hours)
 {
     return hours * (long long)3600;
 }
-inline double folf::timeTools::minutesToDays(unsigned int hours)
+double folf::timeTools::minutesToDays(unsigned int hours)
 {
     return hours / (double)1440;
 }
-inline double folf::timeTools::minutesToHours(unsigned int minutes)
+double folf::timeTools::minutesToHours(unsigned int minutes)
 {
     return minutes / (double)60;
 }
-inline long long folf::timeTools::minutesToSeconds(unsigned int minutes)
+long long folf::timeTools::minutesToSeconds(unsigned int minutes)
 {
     return minutes * (long long)60;
 }
-inline long long folf::timeTools::minutesToMilliseconds(unsigned int minutes)
+long long folf::timeTools::minutesToMilliseconds(unsigned int minutes)
 {
     return minutes * (long long)60000;
 }
-inline double folf::timeTools::secondsToHours(unsigned int seconds)
+double folf::timeTools::secondsToHours(unsigned int seconds)
 {
     return seconds / (double)3600;
 }
-inline double folf::timeTools::secondsToMinutes(unsigned int seconds)
+double folf::timeTools::secondsToMinutes(unsigned int seconds)
 {
     return seconds / (double)60;
 }
-inline long long folf::timeTools::secondsToMilliseconds(unsigned int seconds)
+long long folf::timeTools::secondsToMilliseconds(unsigned int seconds)
 {
     return seconds * (long long)1000;
 }
-inline long long folf::timeTools::secondsToMicroseconds(unsigned int seconds)
+long long folf::timeTools::secondsToMicroseconds(unsigned int seconds)
 {
     return seconds * (long long)1000000;
 }
-inline double folf::timeTools::millisecondsToMinutes(unsigned int milliseconds)
+double folf::timeTools::millisecondsToMinutes(unsigned int milliseconds)
 {
     return milliseconds / (double)60000;
 }
-inline double folf::timeTools::millisecondsToSeconds(unsigned int milliseconds)
+double folf::timeTools::millisecondsToSeconds(unsigned int milliseconds)
 {
     return milliseconds / (double)1000;
 }
-inline long long folf::timeTools::millisecondsToMicroseconds(unsigned int milliseconds)
+long long folf::timeTools::millisecondsToMicroseconds(unsigned int milliseconds)
 {
     return milliseconds * (long long)1000;
 }
-inline double folf::timeTools::microsecondsToSeconds(unsigned int microseconds)
+double folf::timeTools::microsecondsToSeconds(unsigned int microseconds)
 {
     return microseconds / (double)1000000;
 }
-inline double folf::timeTools::microsecondsToMilliseconds(unsigned int microseconds)
+double folf::timeTools::microsecondsToMilliseconds(unsigned int microseconds)
 {
     return microseconds / (double)1000;
 }

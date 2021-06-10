@@ -7,9 +7,6 @@
 // =============================================================================================
 #pragma once
 
-// macros
-
-
 // includes various functions for benchmarking and common tasks
 namespace folf::timeTools
 {
