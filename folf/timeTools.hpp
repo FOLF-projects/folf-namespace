@@ -8,33 +8,12 @@
 #pragma once
 
 // macros
-#define folf_daysToHours(days) days * (long long)24
-#define folf_daysToMinutes(days) days * (long long)1440
-#define folf_daysToSeconds(days) days * (long long)86400
-#define folf_hoursToDays(hours) hours / (double)24
-#define folf_hoursToMinutes(hours) hours * (long long)60
-#define folf_hoursToSeconds(hours) hours * (long long)3600
-#define folf_minutesToDays(minutes) minutes / (double)1440
-#define folf_minutesToHours(minutes) minutes / (double)60
-#define folf_minutesToSeconds(minutes) minutes * (long long)60
-#define folf_minutesToMilliseconds(minutes) minutes * (long long)60000
-#define folf_secondsToHours(seconds) seconds / (double)3600
-#define folf_secondsToMinutes(seconds) seconds / (double)60
-#define folf_secondsToMilliseconds(seconds) seconds * (long long)1000
-#define folf_secondsToMicroseconds(seconds) seconds  * (long long)1000000
-#define folf_millisecondsToMinutes(milliseconds) milliseconds / (double)60000
-#define folf_millisecondsToSeconds(milliseconds) milliseconds / (double)1000
-#define folf_millisecondsToMicroseconds(milliseconds) milliseconds * (long long)1000
-#define folf_microsecondsToSeconds(microseconds) microseconds / (double)1000000
-#define folf_microsecondsToMilliseconds(microseconds) microseconds / (double)1000
-// returns a std::chrono::time_point, requires <chrono>
-#define folf_getTimestamp (unsigned int)std::chrono::time_point_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now()).time_since_epoch().count()
-// sleeps for the given microseconds, requires <chrono> and <thread>
-#define folf_sleepFor(microSeconds) std::this_thread::sleep_for(std::chrono::microseconds(microSeconds))
+
 
 // includes various functions for benchmarking and common tasks
 namespace folf::timeTools
 {
+        // TODO: add option to pause timer
         // a simple timer with additional features
         class timer
         {
@@ -57,4 +36,29 @@ namespace folf::timeTools
             // stops time benchmarking
             ~timeBench();
         };
+
+        // returns a std::chrono::time_point
+        unsigned int getTimestamp();
+        // sleeps for the given microseconds, requires <chrono> and <thread>
+        void sleep(unsigned int);
+
+        long long daysToHours(unsigned int);
+        long long daysToMinutes(unsigned int);
+        long long daysToSeconds(unsigned int);
+        double hoursToDays(unsigned int);
+        long long hoursToMinutes(unsigned int);
+        long long hoursToSeconds(unsigned int);
+        double minutesToDays(unsigned int);
+        double minutesToHours(unsigned int);
+        long long minutesToSeconds(unsigned int);
+        long long minutesToMilliseconds(unsigned int);
+        double secondsToHours(unsigned int);
+        double secondsToMinutes(unsigned int);
+        long long secondsToMilliseconds(unsigned int);
+        long long secondsToMicroseconds(unsigned int);
+        double millisecondsToMinutes(unsigned int);
+        double millisecondsToSeconds(unsigned int);
+        long long millisecondsToMicroseconds(unsigned int);
+        double microsecondsToSeconds(unsigned int);
+        double microsecondsToMilliseconds(unsigned int);
     }
