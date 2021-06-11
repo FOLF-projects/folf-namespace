@@ -13,7 +13,7 @@
 
 void primeFunction(const unsigned long long *maxNumber, unsigned long long *primeSum, bool *finished) 
 {
-    folf::calcTools::primeSum(maxNumber, primeSum);
+    folf::calcTools::primeSum(*maxNumber, primeSum);
     *finished = true;
 }
 int main()

@@ -11,7 +11,7 @@
 
 void timer(bool *finished)
 {
-    folf_sleepFor(folf_secondsToMicroseconds(1));
+    folf::timeTools::sleep(folf::timeTools::secondsToMicroseconds(1));
     *finished = true;
 }
 int main() 
