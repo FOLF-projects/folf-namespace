@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include <folf/algorithms.hpp>
 
 // testing for folf's algorithms header
 
