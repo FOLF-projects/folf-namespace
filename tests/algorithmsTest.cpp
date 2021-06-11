@@ -6,5 +6,5 @@
 // example test, TEST(TEST_SUITE, TEST_NAME) << "OPTIONAL TEST DESCRIPTION"
 TEST(timeToolsTest, exampleTest)
 {
-    EXPECT_EQ(euclidean_algorithm(442, 255),17) << "Test euclidean algorithm";
+    EXPECT_EQ(folf::algorithms::euclidean_algorithm(442, 255),17) << "Test euclidean algorithm";
 }
